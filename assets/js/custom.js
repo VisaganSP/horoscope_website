@@ -1,3 +1,35 @@
+window.addEventListener('scroll', function() {
+  var headerDetail = document.querySelector('.as_info_detail');
+  if (window.scrollY > 0) {
+      headerDetail.classList.add('hide');
+  } else {
+      headerDetail.classList.remove('hide');
+  }
+});
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('.as_logo');
+  if (window.scrollY > 0) {
+      header.classList.add('hide');
+  } else {
+      header.classList.remove('hide');
+  }
+});
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('.as_menu_wrapper');
+  if (window.scrollY > 0) {
+      header.classList.add('navi');
+  } else {
+      header.classList.remove('navi');
+  }
+});
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('.log');
+  if (window.scrollY > 0) {
+      header.classList.add('vis');
+  } else {
+      header.classList.remove('vis');
+  }
+})
 $(document).ready(function(){
     // banner slider
     $('.as_banner_slider').slick({
@@ -9,10 +41,6 @@ $(document).ready(function(){
         nextArrow:'<button type="button" class="slick-next as_btn">Next<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="8" height="12" viewBox="0 0 8 12"><path d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z" class="cls-1"/> </svg></span></button>'
     });
 
-  //   window.addEventListener('scroll', function() {
-  //     var asInfoDetail = document.querySelector('.as_info_detail');
-  //     asInfoDetail.classList.remove('as_info_detail');
-  // });
     // customer slider
     $('.as_customer_slider').slick({
         infinite: false,
