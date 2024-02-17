@@ -10,6 +10,18 @@
 small{
     color: red;
 }
+.as_banner_img,.selva{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.selva {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Adjust the size of the Selva image */
+  }
 .slogo{
     height: 80px;
 }
