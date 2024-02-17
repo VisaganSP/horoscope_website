@@ -38,15 +38,15 @@
     />
   </head>
 
-  <body>
+  <body class="bod">
     <div class="as_loader">
       <img src="assets/images/loader.png" alt="" class="img-responsive" />
     </div>
     <div class="as_main_wrapper">
       <section class="as_header_wrapper fixed-top">
         <div class="as_logo">
-          <a href="javascript:;"
-            ><img src="assets/images/slogo.png" class="slogo" alt=""
+          <a href="index.html"
+            ><img src="assets/images/Logon.png" class="slogo logon" alt=""
           /></a>
         </div>
         <div class="as_header_detail">
@@ -110,8 +110,8 @@
               <img src="assets/images/svg/menu.svg" alt="" />
             </span>
             <div class="log">
-              <a href=""
-                ><img src="assets/images/slogo.png" class="slogo" alt=""
+              <a href="index.html"
+                ><img src="assets/images/Logon.png" class="slogo" alt=""
               /></a>
             </div>
             <div class="as_menu">
@@ -127,9 +127,9 @@
                   </ul>
                 </li> -->
                 <li>
-                  <a href="appointment.html" class="active">appointment</a>
+                  <a href="appointment.html" class="active">Contact us</a>
                 </li>
-                <li><a href="contact.html">contact</a></li>
+                <!-- <li><a href="contact.html">contact</a></li> -->
               </ul>
             </div>
           </div>
@@ -137,9 +137,7 @@
         </div>
       </section>
       <section
-        class="as_appointment_wrapper as_padderTop80 as_padderBottom80"
-        style="margin-top: 10em"
-      >
+        class="as_appointment_wrapper as_padderTop80 as_padderBottom80" style="margin-top: 10em;">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -147,7 +145,7 @@
                 Make Your Appointment To Discuss Any Problem.
               </h2>
               <div class="as_journal_box_wrapper">
-                <form onsubmit="return validateForm()" method="post">
+                <form onsubmit="return  validateForm() && sendwhatsapp()">
                   <h3 class="text-center as_subheading">Appointment Form</h3>
                   <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -200,6 +198,7 @@
                           id="drop"
                           data-placeholder="Gender"
                           name="userGender"
+                          required
                         >
                           <option value="0">Select</option>
                           <option value="Male">Male</option>
@@ -223,6 +222,7 @@
                           onchange="updateSecondDropdown()"
                           name="userProblem"
                           data-placeholder="Select"
+                          required
                         >
                           <!-- <option value="0">Select problem</option> -->
                           <option value="Match Making">Match Making</option>
@@ -281,6 +281,7 @@
                               placeholder="HH:MM:SS"
                               name="userTOB"
                               pattern="^(?:[01]\d|2[0-3]):(?:[0-5]\d):(?:[0-5]\d)$"
+                              required
                             />
                           </div>
                           <small id="timeError" class="error-message"></small>
@@ -337,7 +338,6 @@
                       <button
                         type="submit"
                         class="as_btn"
-                        onclick="sendwhatsapp();"
                       >
                         appointment on whatsapp
                       </button>
@@ -349,7 +349,41 @@
           </div>
         </div>
       </section>
-
+      <section class="as_contact_section as_padderTop80 p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="as_contact_info">
+                        <h1 class="as_heading">Contact Information</h1>
+                        <p class="as_font14 as_margin0">Astroselvendran
+                            103A/4,Perumal kovil Street, Venkatachalapuram, Theni-625534,Tamil Nadu</p>
+  
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_info_box">
+                                    <span class="as_icon"><img src="assets/images/svg/call1.svg" alt=""></span>
+                                    <div class="as_info">
+                                        <h5>Call Us</h5>
+                                        <p class="as_margin0 as_font14">+91 9092505041 </p>
+                                        <p class="as_margin0 as_font14">+91 9003956886 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_info_box">
+                                    <span class="as_icon"><img src="assets/images/svg/mail.svg" alt=""></span>
+                                    <div class="as_info">
+                                        <h5>Mail Us</h5>
+                                        <p class="as_margin0 as_font14"><a href="javascript:;">astroselvendran@gmail.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
       <section class="as_customer_wrapper as_padderBottom80 as_padderTop80">
         <div class="container">
           <div class="row">
@@ -441,7 +475,9 @@
           </div>
         </div>
       </section>
-
+      <section class="as_map_section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.9872168351386!2d77.47598231435536!3d10.011171992759756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b997669cb22a0b1%3A0x9e6d96806e1bfdfa!2sTheni%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1644468795369!5m2!1sen!2sin" width="100%" height="753px" style="border:none;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
       <section class="as_footer_wrapper as_padderTop80">
         <div class="container">
           <div class="as_footer_inner as_padderTop50 as_padderBottom80">
@@ -491,7 +527,7 @@
 
                   <ul>
                     <li>
-                      <a href="service_detail.html"
+                      <a href="service.html"
                         ><span
                           ><svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -510,7 +546,7 @@
                       >
                     </li>
                     <li>
-                      <a href="service_detail.html">
+                      <a href="service.html">
                         <span
                           ><svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -590,28 +626,10 @@
                               class="cls-1"
                             /></svg
                         ></span>
-                        Appoinment</a
+                        Contact us</a
                       >
                     </li>
-                    <li>
-                      <a href="contact.html"
-                        ><span
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            preserveAspectRatio="xMidYMid"
-                            width="8"
-                            height="12"
-                            viewBox="0 0 8 12"
-                          >
-                            <path
-                              d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
-                              class="cls-1"
-                            /></svg
-                        ></span>
-                        Contact Us</a
-                      >
-                    </li>
+          
                   </ul>
                 </div>
               </div>
@@ -797,17 +815,19 @@
       src="assets/js/plugin/select2/select2.min.js"
     ></script>
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/Validation.js"></script>
+    <!-- <script src="assets/js/Validation.js"></script> -->
     <script src="assets/js/Dynamic.js"></script>
-    <script src="assets/js/whatsapp.js"></script>
+    <script src="assets/js/Condition.js"></script>
     <script>
       // Get the query parameter value from the URL
       var urlParams = new URLSearchParams(window.location.search);
       var selectedOptionValue = urlParams.get("option");
-
       // Set the selected option in the dropdown
       var selectedOptionDropdown = document.getElementById("drop2");
       selectedOptionDropdown.value = selectedOptionValue;
+      window.onload = function() {
+        updateSecondDropdown();
+    };
     </script>
   </body>
 </html>
