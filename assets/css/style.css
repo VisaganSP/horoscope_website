@@ -7,6 +7,9 @@
     --white-color:#ffffff;
     --transition:0.4s ease-in-out;
 }
+small{
+    color: red;
+}
 .slogo{
     height: 70px;
     width:130px;
@@ -77,7 +80,7 @@ a, a:hover, a:focus {
     padding-top: 70px;
 }
 .as_padderTop80{
-    padding-top: 80px;
+    padding-top: 30px;
 }
 .as_padderTop90{
     padding-top: 90px;
@@ -140,13 +143,16 @@ a, a:hover, a:focus {
     left: 50%;
     transform: translateX(-50%);
 }
-.as_heading:after{
+/* .as_heading:after{
     position: absolute;
     content: '';
     width: 100px;
     border-bottom: 3px solid var(--secondary-color);
     left: 0;
     bottom: 0;
+} */
+.as_heading{
+    color: #e66712;
 }
 .form-control {
     height: 50px;
@@ -724,7 +730,7 @@ span.select2-dropdown.select2-dropdown--above, .select2-container--open .select2
 /* header css end */ 
 /* banner css start */
 .as_banner_wrapper{
-    background-image: url(../images/bg1.jpg);
+    background-image: url(../images/hb.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -863,8 +869,8 @@ span.select2-dropdown.select2-dropdown--above, .select2-container--open .select2
     content: '';
     left: 17px;
     bottom: 0;
-    border-left: 2px solid var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+    /* border-left: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color); */
     width: 90px;
     height: 90px;
 }
@@ -1119,7 +1125,7 @@ li.as_form_box {
 /* zodiec sign form css end */
 /* customer css start */
 .as_customer_wrapper{
-    background-image: url('../images/bg4.jpg');
+    background-image: url('../images/bac.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
@@ -1336,13 +1342,12 @@ section.as_whychoose_wrapper.as_padderTop80 {
 /* overview css start */
 
 .as_overview_wrapper{
-    background-image: url('../images/bg6.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
+   background-color: white;
+   color: #07273c;
 }
 .as_overview_inner {
     background-color: #10334a;
+    color: white;
     padding: 42px 50px 50px;
 }
 .as_overview_inner h4 {
@@ -1399,6 +1404,10 @@ section.as_whychoose_wrapper.as_padderTop80 {
     top: 5px;
     bottom: 5px;
     z-index: 1;
+}
+.as_footer_wrapper{
+    background-color: white;
+    color: #0c2d43;
 }
 .as_footer_inner {
     display: flex;
@@ -2720,7 +2729,7 @@ textarea.form-control {
         padding-bottom: 70px;
     }
     .as_padderTop80 {
-        padding-top: 70px;
+        padding-top: 40px;
         overflow: hidden;
     }
     .as_sign_ul li:first-child, .as_sign_ul li:last-child,.as_sign_ul li:nth-child(2), .as_sign_ul li:nth-child(5),.as_sign_ul.as_sign_ul_right li:first-child, .as_sign_ul.as_sign_ul_right li:last-child ,  .as_sign_ul.as_sign_ul_right li:nth-child(2), .as_sign_ul.as_sign_ul_right li:nth-child(5) {
