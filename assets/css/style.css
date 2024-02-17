@@ -10,10 +10,27 @@
 small{
     color: red;
 }
-.slogo{
-    height: 70px;
-    width:130px;
+.as_banner_img,.selva{
+  display: block;
+  width: 100%;
+  height: auto;
 }
+.selva {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Adjust the size of the Selva image */
+  }
+.slogo{
+    height: 80px;
+}
+@media only screen and (max-width: 600px) {
+    .logon{
+        height: auto;
+        width: 200px;
+    }
+  }
 .as_info_detail.hide {
     display: none;
 }
@@ -730,7 +747,7 @@ span.select2-dropdown.select2-dropdown--above, .select2-container--open .select2
 /* header css end */ 
 /* banner css start */
 .as_banner_wrapper{
-    background-image: url(../images/hb.jpg);
+    background-image: url(../images/Hb.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1406,8 +1423,8 @@ section.as_whychoose_wrapper.as_padderTop80 {
     z-index: 1;
 }
 .as_footer_wrapper{
-    background-color: white;
-    color: #0c2d43;
+    background-color: #0c2d43;
+    color: white;
 }
 .as_footer_inner {
     display: flex;
@@ -2134,11 +2151,19 @@ section.as_whychoose_wrapper.as_padderTop80 {
 }
 /* Login popup End */
 /* Appointment Page Start */
-.as_appointment_wrapper,.as_product_single_wrapper,.as_team_wrapper,.as_privacy_wrapper,.as_faq_wrapper,.as_contact_section {
+.as_product_single_wrapper,.as_team_wrapper,.as_privacy_wrapper,.as_faq_wrapper {
     background-image: url(../images/bg4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
+}
+.as_contact_section{
+    /* background-image: url(../images/Ob.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    background-color: #17384e;
 }
 .as_journal_box_wrapper {
     background-color:var(--dark-color2);
