@@ -37,6 +37,7 @@
       type="image/x-icon"
     />
   </head>
+
   <body>
     <div class="as_loader">
       <img src="assets/images/loader.png" alt="" class="img-responsive" />
@@ -44,7 +45,9 @@
     <div class="as_main_wrapper">
       <section class="as_header_wrapper fixed-top">
         <div class="as_logo">
-          <a href="javascript:;"><img src="assets/images/slogo.png" class="slogo" alt="" /></a>
+          <a href="javascript:;"
+            ><img src="assets/images/slogo.png" class="slogo" alt=""
+          /></a>
         </div>
         <div class="as_header_detail">
           <div class="as_info_detail">
@@ -56,7 +59,7 @@
                       <img src="assets/images/svg/headphone.svg" alt="" />
                     </span>
                     <!-- <span class="as_orange">Talk to our Astrogers -</span>-->+91
-                    9003956886 
+                    9003956886
                   </div>
                 </a>
               </li>
@@ -77,7 +80,7 @@
                       <img src="assets/images/svg/whatsapp.svg" alt="" />
                     </span>
                     <!-- <span class="as_orange">Talk to our Astrogers -</span> -->+91
-                    9092505041 
+                    9092505041
                   </div>
                 </a>
               </li>
@@ -107,8 +110,10 @@
               <img src="assets/images/svg/menu.svg" alt="" />
             </span>
             <div class="log">
-              <a href=""><img src="assets/images/slogo.png" class="slogo" alt=""></a>
-           </div>
+              <a href=""
+                ><img src="assets/images/slogo.png" class="slogo" alt=""
+              /></a>
+            </div>
             <div class="as_menu">
               <ul>
                 <li><a href="index.html">home</a></li>
@@ -131,7 +136,10 @@
           <span class="as_body_overlay"></span>
         </div>
       </section>
-      <section class="as_appointment_wrapper as_padderTop80 as_padderBottom80" style="margin-top: 10em;">
+      <section
+        class="as_appointment_wrapper as_padderTop80 as_padderBottom80"
+        style="margin-top: 10em"
+      >
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -139,76 +147,92 @@
                 Make Your Appointment To Discuss Any Problem.
               </h2>
               <div class="as_journal_box_wrapper">
-                <form onsubmit="return validateForm()">
+                <form onsubmit="return validateForm()" method="post">
                   <h3 class="text-center as_subheading">Appointment Form</h3>
                   <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                      <label>name <span style="color: orange;">*</span></label>
+                      <label>name <span style="color: orange">*</span></label>
                       <div class="form-group">
                         <input
                           class="form-control"
                           type="text"
+                          name="userName"
                           id="name"
                           placeholder="Name"
                         />
                         <small id="name-error" class="error-message"></small>
                       </div>
-                     
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                      <label>email <span style="color: orange;">*</span></label>
+                      <label>email <span style="color: orange">*</span></label>
                       <div class="form-group">
                         <input
                           class="form-control"
                           id="email"
                           type="text"
+                          name="userEmail"
                           placeholder="Email"
                         />
                         <small id="email-error" class="error-message"></small>
                       </div>
-                      
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                      <label>mobile number <span style="color: orange;">*</span></label>
+                      <label
+                        >mobile number
+                        <span style="color: orange">*</span></label
+                      >
                       <div class="form-group">
                         <input
                           class="form-control"
                           type="number"
                           id="pnum"
+                          name="userPhone"
                           placeholder="Mobile Number"
                         />
                         <small id="pnum-error" class="error-message"></small>
                       </div>
-                      
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                      <label>gender <span style="color: orange;">*</span></label>
+                      <label>gender <span style="color: orange">*</span></label>
                       <div class="form-group as_select_box">
-                        <select class="form-control"id="drop" data-placeholder="Gender">
+                        <select
+                          class="form-control"
+                          id="drop"
+                          data-placeholder="Gender"
+                          name="userGender"
+                        >
                           <option value="0">Select</option>
-                          <option value="1">Male</option>
-                          <option value="2">Female</option>
-                          <option value="3">Other</option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Other">Other</option>
                         </select>
                         <small id="gender-error" class="error-message"></small>
                       </div>
-                      
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                      <label>Problems <span style="color: orange;">*</span></label>
+                      <label
+                        >Problems <span style="color: orange">*</span></label
+                      >
                       <div
                         class="form-group as_select_box"
                         data-placeholder="Time of day"
                       >
-                        <select class="form-control" id="drop2" onchange="updateSecondDropdown()" data-placeholder="Select">
+                        <select
+                          class="form-control"
+                          id="drop2"
+                          onchange="updateSecondDropdown()"
+                          name="userProblem"
+                          data-placeholder="Select"
+                        >
                           <!-- <option value="0">Select problem</option> -->
-                          <option value="1">Match Making</option>
-                          <option value="2">Deep Horoscope Analysis</option>
-                          <option value="3">Others</option>
+                          <option value="Match Making">Match Making</option>
+                          <option value="Deep Horoscope Analysis">
+                            Deep Horoscope Analysis
+                          </option>
+                          <option value="Others">Others</option>
                         </select>
-                       <small id="problem-error" class="error-message"></small>
+                        <small id="problem-error" class="error-message"></small>
                       </div>
-                     
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label>Other problems</label>
@@ -216,70 +240,107 @@
                         class="form-group as_select_box"
                         data-placeholder="Way to reach"
                       >
-                        <select class="form-control" id="other" data-placeholder="">
-                        </select>
+                        <select
+                          class="form-control"
+                          id="other"
+                          name="userOtherProblem"
+                          data-placeholder=""
+                        ></select>
                       </div>
                       <!-- <small class="error-message"></small> -->
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                          <label>Date of Birth <span style="color: orange;">*</span></label>
-                          <div class="form-group">
-                            <input
-                              class="form-control"
-                              type="date"
-                              placeholder="Sec"
-                              id="sec"
-                              required
-                            />
-                          </div>
-                          <small id="tob-error" class="error-message"></small> 
+                      <label
+                        >Date of Birth
+                        <span style="color: orange">*</span></label
+                      >
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          type="date"
+                          placeholder="Sec"
+                          id="sec"
+                          name="userDOB"
+                          required
+                        />
+                      </div>
+                      <small id="tob-error" class="error-message"></small>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-5">
-                          <label>Time of Birth <span style="color: orange;">*</span></label>
+                          <label
+                            >Time of Birth
+                            <span style="color: orange">*</span></label
+                          >
                           <div class="form-group">
-                            <input class="form-control" type="text" id="timeInput" placeholder="HH:MM:SS" pattern="^(?:[01]\d|2[0-3]):(?:[0-5]\d):(?:[0-5]\d)$">
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="timeInput"
+                              placeholder="HH:MM:SS"
+                              name="userTOB"
+                              pattern="^(?:[01]\d|2[0-3]):(?:[0-5]\d):(?:[0-5]\d)$"
+                            />
                           </div>
                           <small id="timeError" class="error-message"></small>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-5">
                           <div class="form-group as_select_box">
                             <label></label>
-                          <select id="ampm" class="form-control" required>
-                            <option value="AM">AM</option>
-                            <option value="PM">PM</option>
-                          </select>
+                            <select
+                              id="ampm"
+                              class="form-control"
+                              name="userTOBAMorPM"
+                              required
+                            >
+                              <option value="AM">AM</option>
+                              <option value="PM">PM</option>
+                            </select>
                           </div>
                         </div>
-                      </div> 
-                      
-                   </div>
+                      </div>
+                    </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                      <label>Place of birth <span style="color: orange;">*</span></label>
+                      <label
+                        >Place of birth
+                        <span style="color: orange">*</span></label
+                      >
                       <div class="form-group">
                         <input
                           class="form-control"
                           type="text"
                           placeholder="Place"
+                          name="userPOB"
                           id="birth"
                         />
                       </div>
                       <small id="pob-error" class="error-message"></small>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                      <label>Ask your Question? (for prasanna predictions only)</label>
+                      <label
+                        >Ask your Question? (for prasanna predictions
+                        only)</label
+                      >
                       <div class="form-group">
                         <textarea
                           placeholder="Message"
                           class="form-control"
+                          name="userQuestion"
+                          id="question"
                         ></textarea>
                       </div>
                     </div>
                     <div
                       class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center as_padderTop20"
                     >
-                    <button type="submit" class="as_btn">make an appointment</button>
+                      <button
+                        type="submit"
+                        class="as_btn"
+                        onclick="sendwhatsapp();"
+                      >
+                        appointment on whatsapp
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -288,7 +349,6 @@
           </div>
         </div>
       </section>
-
 
       <section class="as_customer_wrapper as_padderBottom80 as_padderTop80">
         <div class="container">
@@ -394,7 +454,8 @@
                     /></a>
                   </div>
                   <p>
-                    Astro Selvendran is a well-known astrologer in India, known for his unique blend of traditional and modern methods.
+                    Astro Selvendran is a well-known astrologer in India, known
+                    for his unique blend of traditional and modern methods.
                   </p>
 
                   <div class="as_share_box">
@@ -466,7 +527,7 @@
                         ></span>
                         Deep Horoscope Analysis</a
                       >
-                      </li>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -562,14 +623,15 @@
                   <ul class="as_contact_list">
                     <li>
                       <img src="assets/images/svg/map.svg" alt="" />
-                      <p>Astroselvendran
-                        103A/4,Perumal kovil Street, Venkatachalapuram, Theni-625534,Tamil Nadu</p>
+                      <p>
+                        Astroselvendran 103A/4,Perumal kovil Street,
+                        Venkatachalapuram, Theni-625534,Tamil Nadu
+                      </p>
                     </li>
                     <li>
                       <img src="assets/images/svg/address.svg" alt="" />
                       <p>
-                        <a href="javascript:;">visai@gmail.com</a>
-                        <a href="javascript:;">visagansvvg@gmail.com</a>
+                        <a href="javascript:;">astroselvendran@gmail.com</a>
                       </p>
                     </li>
                     <li>
@@ -737,14 +799,15 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/Validation.js"></script>
     <script src="assets/js/Dynamic.js"></script>
+    <script src="assets/js/whatsapp.js"></script>
     <script>
       // Get the query parameter value from the URL
       var urlParams = new URLSearchParams(window.location.search);
-      var selectedOptionValue = urlParams.get('option');
+      var selectedOptionValue = urlParams.get("option");
 
       // Set the selected option in the dropdown
-      var selectedOptionDropdown = document.getElementById('drop2');
+      var selectedOptionDropdown = document.getElementById("drop2");
       selectedOptionDropdown.value = selectedOptionValue;
-      </script>
+    </script>
   </body>
 </html>
