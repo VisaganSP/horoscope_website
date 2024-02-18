@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AstroSelvendran</title>
+    <title>Selvendran Astrology</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -137,9 +137,7 @@
         </div>
       </section>
       <section
-        class="as_appointment_wrapper as_padderTop80 as_padderBottom80"
-        style="margin-top: 10em"
-      >
+        class="as_appointment_wrapper as_padderTop80 as_padderBottom80" style="margin-top: 10em;">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -231,6 +229,9 @@
                           <option value="Deep Horoscope Analysis">
                             Deep Horoscope Analysis
                           </option>
+                          <option value="Prasanna Jodhidam">
+                            Prasanna Jodhidam
+                          </option>
                           <option value="Others">Others</option>
                         </select>
                         <small id="problem-error" class="error-message"></small>
@@ -269,40 +270,21 @@
                       <small id="tob-error" class="error-message"></small>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                      <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-5">
-                          <label
+                      <label
                             >Time of Birth
                             <span style="color: orange">*</span></label
                           >
                           <div class="form-group">
                             <input
                               class="form-control"
-                              type="text"
-                              id="timeInput"
-                              placeholder="HH:MM:SS"
+                              type="time"
+                              id="settime"
                               name="userTOB"
-                              pattern="^(?:[01]\d|2[0-3]):(?:[0-5]\d):(?:[0-5]\d)$"
+                              step="1"
                               required
                             />
                           </div>
                           <small id="timeError" class="error-message"></small>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-5">
-                          <div class="form-group as_select_box">
-                            <label></label>
-                            <select
-                              id="ampm"
-                              class="form-control"
-                              name="userTOBAMorPM"
-                              required
-                            >
-                              <option value="AM">AM</option>
-                              <option value="PM">PM</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <label
@@ -337,8 +319,11 @@
                     <div
                       class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center as_padderTop20"
                     >
-                      <button type="submit" class="as_btn">
-                        appointment on whatsapp
+                      <button
+                        type="submit"
+                        class="as_btn"
+                      >
+                        Submit
                       </button>
                     </div>
                   </div>
@@ -350,170 +335,161 @@
       </section>
       <section class="as_contact_section as_padderTop80 p-5">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-12">
-              <div class="as_contact_info">
-                <h1 class="as_heading">Contact Information</h1>
-                <p class="as_font14 as_margin0">
-                  Astroselvendran 103A/4,Perumal kovil Street,
-                  Venkatachalapuram, Theni-625534,Tamil Nadu
-                </p>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="as_contact_info">
+                        <h1 class="as_heading">Contact Information</h1>
+                        <p class="as_font14 as_margin0">Astroselvendran
+                            103A/4,Perumal kovil Street, Venkatachalapuram, Theni-625534,Tamil Nadu</p>
+  
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_info_box">
+                                    <span class="as_icon"><img src="assets/images/svg/call1.svg" alt=""></span>
+                                    <div class="as_info">
+                                        <h5>Call Us</h5>
+                                        <!-- <p class="as_margin0 as_font14">+91 9092505041 </p> -->
+                                        <p class="as_margin0 as_font14">+91 9003956886 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_info_box">
+                                    <span class="as_icon"><img src="assets/images/svg/mail.svg" alt=""></span>
+                                    <div class="as_info">
+                                        <h5>Mail Us</h5>
+                                        <p class="as_margin0 as_font14"><a href="javascript:;">astroselvendran@gmail.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="as_customer_wrapper as_padderBottom80 as_padderTop80">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h1 class="as_heading as_heading_center">
+              What Our Customers Say
+            </h1>
+            <p class="as_font14 as_margin0 as_padderBottom50">
+              Astro Selvendran's expertise in astrology is remarkable. His
+              accurate insights and dedication to serving humanity are
+              commendable. <br />No doubt he's on the path to becoming a
+              sought-after astrologer.
+            </p>
 
-                <div class="row">
-                  <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                    <div class="as_info_box">
-                      <span class="as_icon"
-                        ><img src="assets/images/svg/call1.svg" alt=""
-                      /></span>
-                      <div class="as_info">
-                        <h5>Call Us</h5>
-                        <p class="as_margin0 as_font14">+91 9092505041</p>
-                        <p class="as_margin0 as_font14">+91 9003956886</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                    <div class="as_info_box">
-                      <span class="as_icon"
-                        ><img src="assets/images/svg/mail.svg" alt=""
-                      /></span>
-                      <div class="as_info">
-                        <h5>Mail Us</h5>
-                        <p class="as_margin0 as_font14">
-                          <a href="javascript:;">astroselvendran@gmail.com</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+            <div class="row as_customer_slider">
+              <div class="col-lg-6 col-md-6">
+                <div class="as_customer_box text-center">
+                  <span class="as_customer_img">
+                    <img
+                      src="assets/images/default.jpg"
+                      alt=""
+                      width="100px"
+                      height="100px"
+                    />
+                    <span
+                      ><img src="assets/images/svg/quote1.svg" alt=""
+                    /></span>
+                  </span>
+                  <p class="as_margin0">
+                    "An extremely authentic astrologer; everything resonated
+                    deeply with my experiences over the years. The insights
+                    provided made my future much clearer and filled with
+                    positivity. I appreciate the clarity and vivid imagery you
+                    employ, making astrology accessible even for beginners
+                    like myself."
+                  </p>
+                  <h3>G.Vinoth</h3>
+                  <p class="as_margin0">Mechanical Engineer</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="as_customer_box text-center">
+                  <span class="as_customer_img">
+                    <img
+                      src="assets/images/default.jpg"
+                      alt=""
+                      width="100px"
+                      height="100px"
+                    />
+                    <span
+                      ><img src="assets/images/svg/quote1.svg" alt=""
+                    /></span>
+                  </span>
+                  <p class="as_margin0">
+                    "I recently had a consultation session last week focused
+                    on work and profession with Astro Selvendran. It was a
+                    fantastic experience, during which I received numerous
+                    valuable suggestions pertaining to my career. I
+                    wholeheartedly recommend this package to gain insights
+                    into your work and profession based on your birth chart."
+                  </p>
+                  <h3>Shreya</h3>
+                  <p class="as_margin0">Software Developer</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="as_customer_box text-center">
+                  <span class="as_customer_img">
+                    <img
+                      src="assets/images/default.jpg"
+                      alt=""
+                      width="100px"
+                      height="100px"
+                    />
+                    <span
+                      ><img src="assets/images/svg/quote1.svg" alt=""
+                    /></span>
+                  </span>
+                  <p class="as_margin0">
+                    "Astro Selvendran is truly exceptional in the field of
+                    astrology. His ability to accurately recount past events
+                    in the blink of an eye is remarkable. His extensive
+                    knowledge is truly commendable, and his service to
+                    humanity is invaluable. I have no doubt that he will soon
+                    become the most sought-after astrologer. May God bless him
+                    with a long and fulfilling life."
+                  </p>
+                  <h3>Deepak</h3>
+                  <p class="as_margin0">Bank Manager</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="as_customer_box text-center">
+                  <span class="as_customer_img">
+                    <img
+                      src="assets/images/default.jpg"
+                      alt=""
+                      width="100px"
+                      height="100px"
+                    />
+                    <span
+                      ><img src="assets/images/svg/quote1.svg" alt=""
+                    /></span>
+                  </span>
+                  <p class="as_margin0">
+                    "Astro Selvendran's proficiency in astrology is truly
+                    remarkable. His ability to effortlessly recall past events
+                    is a testament to his deep knowledge and understanding of
+                    the subject. I have personally witnessed the accuracy of
+                    his predictions, and it's truly impressive. His dedication
+                    to serving humanity through his astrological insights is
+                    invaluable."
+                  </p>
+                  <h3>Arjun Kumar</h3>
+                  <p class="as_margin0">Financial Analyst</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Review Section -->
-      <section class="as_customer_wrapper as_padderBottom80 as_padderTop80">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h1 class="as_heading as_heading_center">
-                What Our Customers Say
-              </h1>
-              <p class="as_font14 as_margin0 as_padderBottom50">
-                Astro Selvendran's expertise in astrology is remarkable. His
-                accurate insights and dedication to serving humanity are
-                commendable. <br />No doubt he's on the path to becoming a
-                sought-after astrologer.
-              </p>
-
-              <div class="row as_customer_slider">
-                <div class="col-lg-6 col-md-6">
-                  <div class="as_customer_box text-center">
-                    <span class="as_customer_img">
-                      <img
-                        src="assets/images/default.png"
-                        alt=""
-                        width="100px"
-                        height="100px"
-                      />
-                      <span
-                        ><img src="assets/images/svg/quote1.svg" alt=""
-                      /></span>
-                    </span>
-                    <p class="as_margin0">
-                      "An extremely authentic astrologer; everything resonated
-                      deeply with my experiences over the years. The insights
-                      provided made my future much clearer and filled with
-                      positivity. I appreciate the clarity and vivid imagery you
-                      employ, making astrology accessible even for beginners
-                      like myself."
-                    </p>
-                    <h3>G.Vinoth</h3>
-                    <p class="as_margin0">Mechanical Engineer</p>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="as_customer_box text-center">
-                    <span class="as_customer_img">
-                      <img
-                        src="assets/images/default.png"
-                        alt=""
-                        width="100px"
-                        height="100px"
-                      />
-                      <span
-                        ><img src="assets/images/svg/quote1.svg" alt=""
-                      /></span>
-                    </span>
-                    <p class="as_margin0">
-                      "I recently had a consultation session last week focused
-                      on work and profession with Astro Selvendran. It was a
-                      fantastic experience, during which I received numerous
-                      valuable suggestions pertaining to my career. I
-                      wholeheartedly recommend this package to gain insights
-                      into your work and profession based on your birth chart."
-                    </p>
-                    <h3>Shreya</h3>
-                    <p class="as_margin0">Software Developer</p>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="as_customer_box text-center">
-                    <span class="as_customer_img">
-                      <img
-                        src="assets/images/default.png"
-                        alt=""
-                        width="100px"
-                        height="100px"
-                      />
-                      <span
-                        ><img src="assets/images/svg/quote1.svg" alt=""
-                      /></span>
-                    </span>
-                    <p class="as_margin0">
-                      "Astro Selvendran is truly exceptional in the field of
-                      astrology. His ability to accurately recount past events
-                      in the blink of an eye is remarkable. His extensive
-                      knowledge is truly commendable, and his service to
-                      humanity is invaluable. I have no doubt that he will soon
-                      become the most sought-after astrologer. May God bless him
-                      with a long and fulfilling life."
-                    </p>
-                    <h3>Deepak</h3>
-                    <p class="as_margin0">Bank Manager</p>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="as_customer_box text-center">
-                    <span class="as_customer_img">
-                      <img
-                        src="assets/images/default.png"
-                        alt=""
-                        width="100px"
-                        height="100px"
-                      />
-                      <span
-                        ><img src="assets/images/svg/quote1.svg" alt=""
-                      /></span>
-                    </span>
-                    <p class="as_margin0">
-                      "Astro Selvendran's proficiency in astrology is truly
-                      remarkable. His ability to effortlessly recall past events
-                      is a testament to his deep knowledge and understanding of
-                      the subject. I have personally witnessed the accuracy of
-                      his predictions, and it's truly impressive. His dedication
-                      to serving humanity through his astrological insights is
-                      invaluable."
-                    </p>
-                    <h3>Arjun Kumar</h3>
-                    <p class="as_margin0">Financial Analyst</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
       <section class="as_map_section">
         <iframe
           width="100%"
@@ -523,7 +499,7 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2361.660787258638!2d77.47455621592584!3d10.010507573680354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b99766bd3b1a51d%3A0x95ef08ac201a8af5!2s103A%2F4%2C%20Perumal%20Kovil%20St%2C%20Venkatachalapuram%2C%20Theni%2C%20Tamil%20Nadu%20625534!5e0!3m2!1sen!2sin!4v1645323470159!5m2!1sen!2sin"
           allowfullscreen
         ></iframe>
-      </section>
+       </section>
       <section class="as_footer_wrapper as_padderTop80">
         <div class="container">
           <div class="as_footer_inner as_padderTop50 as_padderBottom80">
@@ -542,7 +518,7 @@
 
                   <div class="as_share_box">
                     <p>Follow Us</p>
-                    <ul>
+                    <ul class="d-flex">
                       <li>
                         <a href="javascript:;"
                           ><img src="assets/images/svg/facebook.svg" alt=""
@@ -550,12 +526,7 @@
                       </li>
                       <li>
                         <a href="javascript:;"
-                          ><img src="assets/images/svg/twitter.svg" alt=""
-                        /></a>
-                      </li>
-                      <li>
-                        <a href="javascript:;"
-                          ><img src="assets/images/svg/google.svg" alt=""
+                          ><img src="assets/images/ins.png" alt="" height="18px" width="18px"
                         /></a>
                       </li>
                       <li>
@@ -608,6 +579,25 @@
                             /></svg
                         ></span>
                         Deep Horoscope Analysis</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service.html">
+                        <span
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid"
+                            width="8"
+                            height="12"
+                            viewBox="0 0 8 12"
+                          >
+                            <path
+                              d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                              class="cls-1"
+                            /></svg
+                        ></span>
+                        Prasanna Jodhidam</a
                       >
                     </li>
                   </ul>
@@ -675,6 +665,7 @@
                         Contact us</a
                       >
                     </li>
+          
                   </ul>
                 </div>
               </div>
@@ -700,8 +691,8 @@
                     <li>
                       <img src="assets/images/svg/call.svg" alt="" />
                       <p>
-                        <a href="javascript:;">+91 9092505041</a><br />
-                        <a href="javascript:;">+91 9003956886</a>
+                        <a href="javascript:;">+91 9003956886</a><br />
+                        <a href="javascript:;">+91 9092505041</a>
                       </p>
                     </li>
                   </ul>
@@ -871,9 +862,9 @@
       // Set the selected option in the dropdown
       var selectedOptionDropdown = document.getElementById("drop2");
       selectedOptionDropdown.value = selectedOptionValue;
-      window.onload = function () {
+      window.onload = function() {
         updateSecondDropdown();
-      };
+    };
     </script>
   </body>
 </html>

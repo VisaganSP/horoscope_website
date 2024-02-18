@@ -89,25 +89,25 @@ function validateForm() {
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
-  document.getElementById("timeInput").addEventListener("input", function() {
-    var timeInput = this.value;
-    var timeError = document.getElementById("timeError");
-    var isValid = true;
-    if (timeInput === "") {
-        timeError.innerText = "Time is required";
-        isValid=false;
-    } else if (!/^(?:[01]\d|2[0-3]):(?:[0-5]\d):(?:[0-5]\d)$/.test(timeInput)) {
-        timeError.innerText = "Invalid time format (HH:MM:SS)";
-        isValid=false;
-    } else {
-        timeError.innerText = "";
-    }
-    return isValid;
-});
+//   document.getElementById("timeInput").addEventListener("input", function() {
+//     var timeInput = this.value;
+//     var timeError = document.getElementById("timeError");
+//     var isValid = true;
+//     if (timeInput === "") {
+//         timeError.innerText = "Time is required";
+//         isValid=false;
+//     } else if (!/^(?:[01]\d|2[0-3]):(?:[0-5]\d):(?:[0-5]\d)$/.test(timeInput)) {
+//         timeError.innerText = "Invalid time format (HH:MM:SS)";
+//         isValid=false;
+//     } else {
+//         timeError.innerText = "";
+//     }
+//     return isValid;
+// });
 function sendwhatsapp() {
-    //   var phonenumber = "+917339124748";
+    var phonenumber = "+917339124748";
       // var phonenumber = "+918667662525";
-    var phonenumber = "+919092505041";
+    // var phonenumber = "+919092505041";
   
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
@@ -116,91 +116,221 @@ function sendwhatsapp() {
     var problem = document.getElementById("drop2").value;
     var otherProblem = document.getElementById("other").value;
     var dateOfBirth = document.getElementById("sec").value;
-    var timeOfBirth = document.getElementById("timeInput").value;
-    var timeOfBirthAMorPM = document.getElementById("ampm").value;
+    var timeOfBirth = document.getElementById("settime").value;
     var placeOfBirth = document.getElementById("birth").value;
     var question = document.getElementById("question").value;
-  
+    var normalTime = convertToNormalTime(timeOfBirth);
+    var convertedDOB = convertDateFormat(dateOfBirth);
     let dateInMillisecs = Date.now();
-    let dateInWords = new Date(dateInMillisecs);
-  
-    if (problem === "Others") {
-      var url =
-        "https://wa.me/" +
-        phonenumber +
-        "?text=" +
-        "*Name :* " +
-        name +
-        "%0a" +
-        "*Email :* " +
-        email +
-        "%0a" +
-        "*Phone :* " +
-        phone +
-        "%0a" +
-        "*Gender :* " +
-        gender +
-        "%0a" +
-        "*Problem :* " +
-        otherProblem +
-        "%0a" +
-        "*Date of Birth :* " +
-        dateOfBirth +
-        "%0a" +
-        "*Time of Birth :* " +
-        timeOfBirth +
-        " " +
-        timeOfBirthAMorPM +
-        " " +
-        "%0a" +
-        "*Place of Birth :* " +
-        placeOfBirth +
-        "%0a" +
-        "*User Asked Question (For Prasanna Predictions only) :* " +
-        question +
-        "%0a" +
-        "*Sending Date and Time :* " +
-        dateInWords +
-        "%0a";
-    } else {
-      var url =
-        "https://wa.me/" +
-        phonenumber +
-        "?text=" +
-        "*Name :* " +
-        name +
-        "%0a" +
-        "*Email :* " +
-        email +
-        "%0a" +
-        "*Phone :* " +
-        phone +
-        "%0a" +
-        "*Gender :* " +
-        gender +
-        "%0a" +
-        "*Problem :* " +
-        problem +
-        "%0a" +
-        "*Date of Birth :* " +
-        dateOfBirth +
-        "%0a" +
-        "*Time of Birth :* " +
-        timeOfBirth +
-        " " +
-        timeOfBirthAMorPM +
-        " " +
-        "%0a" +
-        "*Place of Birth :* " +
-        placeOfBirth +
-        "%0a" +
-        "*User Asked Question (For Prasanna Predictions only) :* " +
-        question +
-        "%0a" +
-        "*Sending Date and Time :* " +
-        dateInWords +
-        "%0a";
+    var formattedDateTime = formatDate(dateInMillisecs);
+    // let dateInWords = new Date(dateInMillisecs);
+    if(question===""){
+      if (problem === "Others") {
+        var url =
+          "https://wa.me/" +
+          phonenumber +
+          "?text=" +
+          "*Name :* " +
+          name +
+          "%0a" +
+          "*Email :* " +
+          email +
+          "%0a" +
+          "*Phone :* " +
+          phone +
+          "%0a" +
+          "*Gender :* " +
+          gender +
+          "%0a" +
+          "*Problem :* " +
+          otherProblem +
+          "%0a" +
+          "*Date of Birth :* " +
+          convertedDOB +
+          "%0a" +
+          "*Time of Birth :* " +
+          normalTime+
+          "%0a" +
+          "*Place of Birth :* " +
+          placeOfBirth +
+          "%0a" +
+          "*Sending Date and Time :* " +
+          formattedDateTime +
+          "%0a";
+      }
+      else {
+        var url =
+          "https://wa.me/" +
+          phonenumber +
+          "?text=" +
+          "*Name :* " +
+          name +
+          "%0a" +
+          "*Email :* " +
+          email +
+          "%0a" +
+          "*Phone :* " +
+          phone +
+          "%0a" +
+          "*Gender :* " +
+          gender +
+          "%0a" +
+          "*Problem :* " +
+          problem +
+          "%0a" +
+          "*Date of Birth :* " +
+          convertedDOB +
+          "%0a" +
+          "*Time of Birth :* " +
+          normalTime +
+          "%0a" +
+          "*Place of Birth :* " +
+          placeOfBirth +
+          "%0a" +
+          "*Sending Date and Time :* " +
+          formattedDateTime +
+          "%0a";
+      }
     }
-  
+    else{
+      if (problem === "Others") {
+        var url =
+          "https://wa.me/" +
+          phonenumber +
+          "?text=" +
+          "*Name :* " +
+          name +
+          "%0a" +
+          "*Email :* " +
+          email +
+          "%0a" +
+          "*Phone :* " +
+          phone +
+          "%0a" +
+          "*Gender :* " +
+          gender +
+          "%0a" +
+          "*Problem :* " +
+          otherProblem +
+          "%0a" +
+          "*Date of Birth :* " +
+          convertedDOB +
+          "%0a" +
+          "*Time of Birth :* " +
+          normalTime+
+          "%0a" +
+          "*Place of Birth :* " +
+          placeOfBirth +
+          "%0a" +
+          "*User Asked Question (For Prasanna Predictions only) :* " +
+          question +
+          "%0a" +
+          "*Sending Date and Time :* " +
+          formattedDateTime +
+          "%0a";
+      } else {
+        var url =
+          "https://wa.me/" +
+          phonenumber +
+          "?text=" +
+          "*Name :* " +
+          name +
+          "%0a" +
+          "*Email :* " +
+          email +
+          "%0a" +
+          "*Phone :* " +
+          phone +
+          "%0a" +
+          "*Gender :* " +
+          gender +
+          "%0a" +
+          "*Problem :* " +
+          problem +
+          "%0a" +
+          "*Date of Birth :* " +
+          convertedDOB +
+          "%0a" +
+          "*Time of Birth :* " +
+          normalTime +
+          "%0a" +
+          "*Place of Birth :* " +
+          placeOfBirth +
+          "%0a" +
+          "*User Asked Question (For Prasanna Predictions only) :* " +
+          question +
+          "%0a" +
+          "*Sending Date and Time :* " +
+          formattedDateTime +
+          "%0a";
+      }
+    
+    }
     window.open(url, "_blank").focus();
   }
+  function convertToNormalTime(railwayTime) {
+    // Parse the railway time string
+    var parts = railwayTime.split(":");
+    var hour = parseInt(parts[0]);
+    var minute = parseInt(parts[1]);
+    var second = parseInt(parts[2]);
+
+    // Determine AM/PM
+    var ampm = hour >= 12 ? 'PM' : 'AM';
+
+    // Convert hour to 12-hour format
+    hour = hour % 12;
+    hour = hour ? hour : 12; // Handle midnight (00:00)
+
+    // Add leading zeros if necessary
+    minute = minute < 10 ? '0' + minute : minute;
+    second = second < 10 ? '0' + second : second;
+
+    // Return the formatted time
+    return hour + ":" + minute + ":" + second + ' ' + ampm;
+}
+
+function convertDateFormat(dateString) {
+  // Split the date string into parts
+  var parts = dateString.split("-");
+  
+  // Rearrange the parts in the desired format
+  var day = parts[2];
+  var month = parts[1];
+  var year = parts[0];
+
+  // Return the formatted date
+  return day + "-" + month + "-" + year;
+}
+function formatDate(dateInMillisecs) {
+  // Create a Date object using the milliseconds
+  var date = new Date(dateInMillisecs);
+
+  // Extract date, month, and year
+  var day = date.getDate();
+  var month = date.getMonth() + 1; // Months are zero-based, so we add 1
+  var year = date.getFullYear();
+
+  // Extract hours, minutes, and seconds
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+
+  // Determine AM/PM
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+
+  // Convert hours to 12-hour format
+  hours = hours % 12;
+  hours = hours ? hours : 12; // Handle midnight (00:00)
+
+  // Add leading zeros if necessary
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+
+  // Return the formatted date and time
+  return day + "-" + month + "-" + year + " " + hours + ":" + minutes + ":" + seconds + ' ' + ampm;
+}
+
+// Example usage:
+
+

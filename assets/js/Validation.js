@@ -6,6 +6,7 @@
     var gender = document.getElementById("drop").value;
     var problem = document.getElementById("drop2").value;
     var birth = document.getElementById("birth").value;
+    document.getElementById("settime").value = "13:24:00";
     // var mes = document.getElementById("mess").value;
     // var reason = document.getElementById("reason").value;
 
@@ -90,15 +91,15 @@
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
-  document.getElementById("timeInput").addEventListener("input", function() {
-    var timeInput = this.value;
-    var timeError = document.getElementById("timeError");
+//   document.getElementById("timeInput").addEventListener("input", function() {
+//     var timeInput = this.value;
+//     var timeError = document.getElementById("timeError");
 
-    if (timeInput === "") {
-        timeError.innerText = "Time is required";
-    } else if (!/^(?:[01]\d|2[0-3]):(?:[0-5]\d):(?:[0-5]\d)$/.test(timeInput)) {
-        timeError.innerText = "Invalid time format (HH:MM:SS)";
-    } else {
-        timeError.innerText = "";
-    }
-});
+//     if (timeInput === "") {
+//         timeError.innerText = "Time is required";
+//     } else if (!/^(?:[01]\d|2[0-3]):(?:[0-5]\d):(?:[0-5]\d)$/.test(timeInput)) {
+//         timeError.innerText = "Invalid time format (HH:MM:SS)";
+//     } else {
+//         timeError.innerText = "";
+//     }
+// });
