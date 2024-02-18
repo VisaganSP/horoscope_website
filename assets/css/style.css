@@ -17,7 +17,7 @@ small{
 }
 .selva {
     position: absolute;
-    top: 80%;
+    top: 88%;
     left: 45%;
     transform: translate(-50%, -50%);
     max-width: 80%; /* Adjust the size of the Selva image */
@@ -755,8 +755,12 @@ span.select2-dropdown.select2-dropdown--above, .select2-container--open .select2
     overflow: hidden;
 }
 .as_banner_detail h5{
-    font-size: 26px;
-    margin: 0 0 5px;
+    font-size: 45px;
+    margin: 0 0 10px;
+    text-align: center;
+}
+.as_banner_detail ul li{
+    font-size:x-large;
 }
 .as_banner_detail h1{
     font-size: 54px;
@@ -764,7 +768,8 @@ span.select2-dropdown.select2-dropdown--above, .select2-container--open .select2
     margin: 0 0 13px;
 }
 .as_banner_detail p {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
+    font-size:x-large;
 }
 .as_banner_wrapper .slick-dots {
     text-align: center;
@@ -2735,13 +2740,13 @@ textarea.form-control {
     } */
     .as_banner_detail h1 {
         font-size: 30px;
-        line-height: 40px;
+        line-height: 30px;
     }
     .as_banner_slider .slick-arrow.slick-next {
         right: -450px;
     }
     .as_banner_detail h5 {
-        font-size: 18px;
+        font-size: 35px;
     }
     .as_aboutimg::before,.as_aboutimg::after{
         display:none
@@ -2990,7 +2995,7 @@ textarea.form-control {
         top: 18px;
     }
     .as_banner_img {
-        margin-top: 50px;
+        margin-top: 100px;
     }
 }
 @media (max-width:650px){
