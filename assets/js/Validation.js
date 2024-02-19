@@ -6,7 +6,7 @@
     var gender = document.getElementById("drop").value;
     var problem = document.getElementById("drop2").value;
     var birth = document.getElementById("birth").value;
-    document.getElementById("settime").value = "13:24:00";
+    // document.getElementById("settime").value = "13:24:00";
     // var mes = document.getElementById("mess").value;
     // var reason = document.getElementById("reason").value;
 
@@ -27,10 +27,10 @@
       document.getElementById("name-error").innerText = "Name is required";
       isValid = false;
     }
-    else if (!/^[a-zA-Z]+(?: [a-zA-Z]+)*$/.test(name)) {
-        document.getElementById("name-error").innerText = "Name must contain only letters and spaces.";
-        return false;
-      }
+    else if (!/^[a-zA-Z ]+$/.test(name)) {
+      document.getElementById("name-error").innerText = "Name must contain only letters and spaces.";
+      return false;
+  }
 
     // Email validation
     if (email === "") {
@@ -72,7 +72,7 @@
       isValid = false;
     }
     else if (!/^[a-zA-Z]+(?: [a-zA-Z]+)*$/.test(birth)) {
-        document.getElementById("name-error").innerText = "Birth place must contain only letters and spaces.";
+        document.getElementById("pob-error").innerText = "Birth place must contain only letters and spaces.";
         return false;
       }
 
