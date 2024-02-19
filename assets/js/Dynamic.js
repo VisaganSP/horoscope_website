@@ -22,6 +22,7 @@ function updateSecondDropdown() {
       "Health Fitness",
       "Legal Issues",
       "Gem Stone Suggestions",
+      "Other Problems"
     ];
     for (var i = 0; i < option1Values.length; i++) {
       var option = document.createElement("option");

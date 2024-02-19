@@ -25,7 +25,7 @@ function validateForm() {
       document.getElementById("name-error").innerText = "Name is required";
       isValid = false;
     }
-    else if (!/^[a-zA-Z]+(?: [a-zA-Z]+)*$/.test(name)) {
+    else if (!/^[a-zA-Z ]+$/.test(name)) {
         document.getElementById("name-error").innerText = "Name must contain only letters and spaces.";
         return false;
       }
@@ -69,10 +69,32 @@ function validateForm() {
         "Place of birth is required";
       isValid = false;
     }
-    else if (!/^[a-zA-Z]+(?: [a-zA-Z]+)*$/.test(birth)) {
-        document.getElementById("name-error").innerText = "Birth place must contain only letters and spaces.";
-        return false;
-      }
+    // else if (!/^[a-zA-Z]+(?: [a-zA-Z]+)*$/.test(birth)) {
+    //     document.getElementById("pob-error").innerText = "Birth place must contain only letters and spaces.";
+    //     return false;
+    //   }
+    // Get the input element
+const timeInput = document.getElementById('settime');
+
+// Add event listener for when the input value changes
+timeInput.addEventListener('change', function() {
+    // Get the entered time value
+    const enteredTime = this.value;
+
+    // Parse the entered time into hours and minutes
+    const [hours, minutes] = enteredTime.split(':');
+
+    // Convert hours to 12-hour format
+    let hours12 = hours % 12;
+    hours12 = hours12 || 12; // If hours12 is 0, set it to 12
+
+    // Determine whether it's AM or PM
+    const period = hours < 12 ? 'AM' : 'PM';
+
+    // Update the input value with the converted time
+    this.value = `${hours12}:${minutes} ${period}`;
+});
+
 
     // Reason for appointment validation
     // if (reason === "") {
