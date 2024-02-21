@@ -3,8 +3,12 @@ function validateForm() {
     var email = document.getElementById("email").value;
     var pnum = document.getElementById("pnum").value;
     var gender = document.getElementById("drop").value;
-    var problem = document.getElementById("drop2").value;
+    // var problem = document.getElementById("drop2").value;
     var birth = document.getElementById("birth").value;
+    var hour = document.getElementById("hours").value;
+    var min = document.getElementById("mins").value;
+    var secs = document.getElementById("secs").value;
+    var ampm = document.getElementById("ampm").value;
     // var mes = document.getElementById("mess").value;
     // var reason = document.getElementById("reason").value;
 
@@ -58,9 +62,9 @@ function validateForm() {
     }
 
     // Problem validation
-    if (problem === "0") {
-      document.getElementById("problem-error").innerText =
-        "Problem selection is required";
+    if(hour==="0" || min==="0" || secs==="0" || ampm ==="0"){
+      document.getElementById("tob-error").innerText =
+        "Please select hours, min, sec & am or pm ";
       isValid = false;
     }
     // Place of birth validation
@@ -74,26 +78,26 @@ function validateForm() {
     //     return false;
     //   }
     // Get the input element
-const timeInput = document.getElementById('settime');
+// const timeInput = document.getElementById('settime');
 
-// Add event listener for when the input value changes
-timeInput.addEventListener('change', function() {
-    // Get the entered time value
-    const enteredTime = this.value;
+// // Add event listener for when the input value changes
+// timeInput.addEventListener('change', function() {
+//     // Get the entered time value
+//     const enteredTime = this.value;
 
-    // Parse the entered time into hours and minutes
-    const [hours, minutes] = enteredTime.split(':');
+//     // Parse the entered time into hours and minutes
+//     const [hours, minutes] = enteredTime.split(':');
 
-    // Convert hours to 12-hour format
-    let hours12 = hours % 12;
-    hours12 = hours12 || 12; // If hours12 is 0, set it to 12
+//     // Convert hours to 12-hour format
+//     let hours12 = hours % 12;
+//     hours12 = hours12 || 12; // If hours12 is 0, set it to 12
 
-    // Determine whether it's AM or PM
-    const period = hours < 12 ? 'AM' : 'PM';
+//     // Determine whether it's AM or PM
+//     const period = hours < 12 ? 'AM' : 'PM';
 
-    // Update the input value with the converted time
-    this.value = `${hours12}:${minutes} ${period}`;
-});
+//     // Update the input value with the converted time
+//     this.value = `${hours12}:${minutes} ${period}`;
+// });
 
 
     // Reason for appointment validation
@@ -138,13 +142,18 @@ function sendwhatsapp() {
     var problem = document.getElementById("drop2").value;
     var otherProblem = document.getElementById("other").value;
     var dateOfBirth = document.getElementById("sec").value;
-    var timeOfBirth = document.getElementById("settime").value;
+    // var timeOfBirth = document.getElementById("settime").value;
+    var hour = document.getElementById("hours").value;
+    var min = document.getElementById("mins").value;
+    var secs = document.getElementById("secs").value;
+    var ampm = document.getElementById("ampm").value;
     var placeOfBirth = document.getElementById("birth").value;
     var question = document.getElementById("question").value;
-    var normalTime = convertToNormalTime(timeOfBirth);
+    // var normalTime = convertToNormalTime(timeOfBirth);
     var convertedDOB = convertDateFormat(dateOfBirth);
     let dateInMillisecs = Date.now();
     var formattedDateTime = formatDate(dateInMillisecs);
+    var tob = hour +":"+min+":"+ secs +" "+ampm;
     // let dateInWords = new Date(dateInMillisecs);
     if(question===""){
       if (problem === "Others") {
@@ -171,7 +180,7 @@ function sendwhatsapp() {
           convertedDOB +
           "%0a" +
           "*Time of Birth :* " +
-          normalTime+
+          tob+
           "%0a" +
           "*Place of Birth :* " +
           placeOfBirth +
@@ -204,7 +213,7 @@ function sendwhatsapp() {
           convertedDOB +
           "%0a" +
           "*Time of Birth :* " +
-          normalTime +
+          tob +
           "%0a" +
           "*Place of Birth :* " +
           placeOfBirth +
@@ -239,7 +248,7 @@ function sendwhatsapp() {
           convertedDOB +
           "%0a" +
           "*Time of Birth :* " +
-          normalTime+
+          tob+
           "%0a" +
           "*Place of Birth :* " +
           placeOfBirth +
@@ -274,7 +283,7 @@ function sendwhatsapp() {
           convertedDOB +
           "%0a" +
           "*Time of Birth :* " +
-          normalTime +
+          tob +
           "%0a" +
           "*Place of Birth :* " +
           placeOfBirth +
@@ -290,28 +299,6 @@ function sendwhatsapp() {
     }
     window.open(url, "_blank").focus();
   }
-  function convertToNormalTime(railwayTime) {
-    // Parse the railway time string
-    var parts = railwayTime.split(":");
-    var hour = parseInt(parts[0]);
-    var minute = parseInt(parts[1]);
-    var second = parseInt(parts[2]);
-
-    // Determine AM/PM
-    var ampm = hour >= 12 ? 'PM' : 'AM';
-
-    // Convert hour to 12-hour format
-    hour = hour % 12;
-    hour = hour ? hour : 12; // Handle midnight (00:00)
-
-    // Add leading zeros if necessary
-    minute = minute < 10 ? '0' + minute : minute;
-    second = second < 10 ? '0' + second : second;
-
-    // Return the formatted time
-    return hour + ":" + minute + ":" + second + ' ' + ampm;
-}
-
 function convertDateFormat(dateString) {
   // Split the date string into parts
   var parts = dateString.split("-");
