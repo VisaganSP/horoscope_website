@@ -3,12 +3,13 @@ function validateForm() {
     var email = document.getElementById("email").value;
     var pnum = document.getElementById("pnum").value;
     var gender = document.getElementById("drop").value;
-    // var problem = document.getElementById("drop2").value;
+    var problem = document.getElementById("drop2").value;
     var birth = document.getElementById("birth").value;
     var hour = document.getElementById("hours").value;
     var min = document.getElementById("mins").value;
     var secs = document.getElementById("secs").value;
     var ampm = document.getElementById("ampm").value;
+    var ques = document.getElementById("qa").value;
     // var mes = document.getElementById("mess").value;
     // var reason = document.getElementById("reason").value;
 
@@ -65,6 +66,16 @@ function validateForm() {
     if(hour==="0" || min==="0" || secs==="0" || ampm ==="0"){
       document.getElementById("tob-error").innerText =
         "Please select hours, min, sec & am or pm ";
+      isValid = false;
+    }
+    if(problem ==="Prasanna Jothidam" && ques===""){
+      document.getElementById("problem-error").innerText =
+        "Your question is required if you select prassanna jodhidam";
+      isValid = false;
+    }
+    if(problem==="Others"  && ques===""){
+      document.getElementById("problem-error").innerText =
+        "Your question is required if you select Others";
       isValid = false;
     }
     // Place of birth validation
@@ -140,7 +151,7 @@ function sendwhatsapp() {
     var phone = document.getElementById("pnum").value;
     var gender = document.getElementById("drop").value;
     var problem = document.getElementById("drop2").value;
-    var otherProblem = document.getElementById("other").value;
+    // var otherProblem = document.getElementById("other").value;
     var dateOfBirth = document.getElementById("sec").value;
     // var timeOfBirth = document.getElementById("settime").value;
     var hour = document.getElementById("hours").value;
@@ -148,15 +159,16 @@ function sendwhatsapp() {
     var secs = document.getElementById("secs").value;
     var ampm = document.getElementById("ampm").value;
     var placeOfBirth = document.getElementById("birth").value;
-    var question = document.getElementById("question").value;
+    // var question = document.getElementById("question").value;
     // var normalTime = convertToNormalTime(timeOfBirth);
     var convertedDOB = convertDateFormat(dateOfBirth);
     let dateInMillisecs = Date.now();
     var formattedDateTime = formatDate(dateInMillisecs);
+    var ques = document.getElementById("qa").value;
     var tob = hour +":"+min+":"+ secs +" "+ampm;
     // let dateInWords = new Date(dateInMillisecs);
-    if(question===""){
-      if (problem === "Others") {
+ 
+      if (ques==="") {
         var url =
           "https://wa.me/" +
           phonenumber +
@@ -174,7 +186,7 @@ function sendwhatsapp() {
           gender +
           "%0a" +
           "*Problem :* " +
-          otherProblem +
+          problem +
           "%0a" +
           "*Date of Birth :* " +
           convertedDOB +
@@ -208,6 +220,9 @@ function sendwhatsapp() {
           "%0a" +
           "*Problem :* " +
           problem +
+          "*Question :* " +
+          ques +
+          "%0a" +
           "%0a" +
           "*Date of Birth :* " +
           convertedDOB +
@@ -222,81 +237,6 @@ function sendwhatsapp() {
           formattedDateTime +
           "%0a";
       }
-    }
-    else{
-      if (problem === "Others") {
-        var url =
-          "https://wa.me/" +
-          phonenumber +
-          "?text=" +
-          "*Name :* " +
-          name +
-          "%0a" +
-          "*Email :* " +
-          email +
-          "%0a" +
-          "*Phone :* " +
-          phone +
-          "%0a" +
-          "*Gender :* " +
-          gender +
-          "%0a" +
-          "*Problem :* " +
-          otherProblem +
-          "%0a" +
-          "*Date of Birth :* " +
-          convertedDOB +
-          "%0a" +
-          "*Time of Birth :* " +
-          tob+
-          "%0a" +
-          "*Place of Birth :* " +
-          placeOfBirth +
-          "%0a" +
-          "*User Asked Question (For Prasanna Predictions only) :* " +
-          question +
-          "%0a" +
-          "*Sending Date and Time :* " +
-          formattedDateTime +
-          "%0a";
-      } else {
-        var url =
-          "https://wa.me/" +
-          phonenumber +
-          "?text=" +
-          "*Name :* " +
-          name +
-          "%0a" +
-          "*Email :* " +
-          email +
-          "%0a" +
-          "*Phone :* " +
-          phone +
-          "%0a" +
-          "*Gender :* " +
-          gender +
-          "%0a" +
-          "*Problem :* " +
-          problem +
-          "%0a" +
-          "*Date of Birth :* " +
-          convertedDOB +
-          "%0a" +
-          "*Time of Birth :* " +
-          tob +
-          "%0a" +
-          "*Place of Birth :* " +
-          placeOfBirth +
-          "%0a" +
-          "*User Asked Question (For Prasanna Predictions only) :* " +
-          question +
-          "%0a" +
-          "*Sending Date and Time :* " +
-          formattedDateTime +
-          "%0a";
-      }
-    
-    }
     window.open(url, "_blank").focus();
   }
 function convertDateFormat(dateString) {

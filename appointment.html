@@ -1,442 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Astro Selvendran</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- stylesheet -->
+<head>
+  <title>Astro Selvendran</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/js/plugin/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/js/plugin/airdatepicker/datepicker.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/js/plugin/select2/select2.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <!-- favicon -->
-    <link
-      rel="shortcut icon"
-      href="assets/images/tit.png"
-      type="image/x-icon"
-    />
-  </head>
+  <!-- stylesheet -->
 
-  <body class="bod">
-    <div class="as_loader">
-      <img src="assets/images/loader.png" alt="" class="img-responsive" />
-    </div>
-    <div class="as_main_wrapper">
-      <section class="as_header_wrapper fixed-top">
-        <div class="as_logo">
-          <a href="index.html"
-            ><img src="assets/images/Logon.png" class="slogo logon" alt=""
-          /></a>
-        </div>
-        <div class="as_header_detail">
-          <div class="as_info_detail">
-            <ul>
-              <li>
-                <a href="javascript:;">
-                  <div class="as_infobox">
-                    <span class="as_infoicon">
-                      <img src="assets/images/svg/headphone.svg" alt="" />
-                    </span>
-                    <!-- <span class="as_orange">Talk to our Astrogers -</span>-->+91
-                    9003956886
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <div class="as_infobox">
-                    <span class="as_infoicon">
-                      <img src="assets/images/svg/mail1.svg" alt="" />
-                    </span>
-                    <!-- <span class="as_orange">Talk to our Astrogers -</span> -->astroselvendran@gmail.com
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;" onclick="openWhatsApp()">
-                  <div class="as_infobox">
-                    <span class="as_infoicon">
-                      <img src="assets/images/svg/whatsapp.svg" alt="" />
-                    </span>
-                    <!-- <span class="as_orange">Talk to our Astrogers -</span> -->+91
-                    9092505041
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <div class="as_right_info">
-              <a href="appointment.html" class="info">
-                <div
-                  class="as_infobox"
-                  data-bs-toggle="modal"
-                  data-bs-target="#as_login"
-                >
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/js/plugin/select2/select2.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="assets/images/tit.png" type="image/x-icon" />
+</head>
+
+<body class="bod">
+  <div class="as_loader">
+    <img src="assets/images/loader.png" alt="" class="img-responsive" />
+  </div>
+  <div class="as_main_wrapper">
+    <section class="as_header_wrapper fixed-top">
+      <div class="as_logo">
+        <a href="index.html"><img src="assets/images/Logon.png" class="slogo logon" alt="" /></a>
+      </div>
+      <div class="as_header_detail">
+        <div class="as_info_detail">
+          <ul>
+            <li>
+              <a href="javascript:;">
+                <div class="as_infobox">
                   <span class="as_infoicon">
-                    <img
-                      src="assets/images/event.png"
-                      alt=""
-                      width="25px"
-                      height="25px"
-                    />
+                    <img src="assets/images/svg/headphone.svg" alt="" />
                   </span>
-                  <span class="as_logintext">Book a consulation</span>
+                  <!-- <span class="as_orange">Talk to our Astrogers -</span>-->+91
+                  9003956886
                 </div>
               </a>
-            </div>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <div class="as_infobox">
+                  <span class="as_infoicon">
+                    <img src="assets/images/svg/mail1.svg" alt="" />
+                  </span>
+                  <!-- <span class="as_orange">Talk to our Astrogers -</span> -->astroselvendran@gmail.com
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;" onclick="openWhatsApp()">
+                <div class="as_infobox">
+                  <span class="as_infoicon">
+                    <img src="assets/images/svg/whatsapp.svg" alt="" />
+                  </span>
+                  <!-- <span class="as_orange">Talk to our Astrogers -</span> -->+91
+                  9092505041
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="as_right_info">
+            <a href="appointment.html" class="info">
+              <div class="as_infobox" data-bs-toggle="modal" data-bs-target="#as_login">
+                <span class="as_infoicon">
+                  <img src="assets/images/event.png" alt="" width="25px" height="25px" />
+                </span>
+                <span class="as_logintext">Book a consulation</span>
+              </div>
+            </a>
           </div>
-          <div class="as_menu_wrapper">
-            <span class="as_toggle">
-              <img src="assets/images/svg/menu.svg" alt="" />
-            </span>
-            <div class="log">
-              <a href="index.html"
-                ><img src="assets/images/Logon.png" class="slogo" alt=""
-              /></a>
-            </div>
-            <div class="as_menu">
-              <ul>
-                <li><a href="index.html">home</a></li>
-                <!-- <li><a href="about.html">about</a></li> -->
-                <li><a href="service.html">Services</a></li>
-                <!-- <li>
+        </div>
+        <div class="as_menu_wrapper">
+          <span class="as_toggle">
+            <img src="assets/images/svg/menu.svg" alt="" />
+          </span>
+          <div class="log">
+            <a href="index.html"><img src="assets/images/Logon.png" class="slogo" alt="" /></a>
+          </div>
+          <div class="as_menu">
+            <ul>
+              <li><a href="index.html">home</a></li>
+              <!-- <li><a href="about.html">about</a></li> -->
+              <li><a href="service.html">Services</a></li>
+              <!-- <li>
                   <a href="javascript:;">Services</a>
                   <ul class="as_submenu">
                     <li><a href="service.html">Match making</a></li>
                     <li><a href="service.html">Deep horoscope analysis</a></li>
                   </ul>
                 </li> -->
-                <li>
-                  <a href="appointment.html" class="active">Contact us</a>
-                </li>
-                <!-- <li><a href="contact.html">contact</a></li> -->
-              </ul>
-            </div>
+              <li>
+                <a href="appointment.html" class="active">Contact us</a>
+              </li>
+              <!-- <li><a href="contact.html">contact</a></li> -->
+            </ul>
           </div>
-          <span class="as_body_overlay"></span>
         </div>
-      </section>
-      <section
-        class="as_appointment_wrapper as_padderTop80 as_padderBottom80"
-        style="margin-top: 10em"
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <h2 class="as_heading as_heading_center text-center">
-                Make Your Appointment To Discuss Any Problem.
-              </h2>
-              <div class="as_journal_box_wrapper">
-                <form onsubmit="return  validateForm() && sendwhatsapp()">
-                  <h3 class="text-center as_subheading">Appointment Form</h3>
-                  <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <label>name <span style="color: orange">*</span></label>
-                      <div class="form-group">
-                        <input
-                          class="form-control"
-                          type="text"
-                          name="userName"
-                          id="name"
-                          placeholder="Name"
-                        />
-                        <small id="name-error" class="error-message"></small>
-                      </div>
+        <span class="as_body_overlay"></span>
+      </div>
+    </section>
+    <section class="as_appointment_wrapper as_padderTop80 as_padderBottom80" style="margin-top: 10em">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="as_heading as_heading_center text-center">
+              Make Your Appointment To Discuss Any Problem.
+            </h2>
+            <div class="as_journal_box_wrapper">
+              <form onsubmit="return  validateForm() && sendwhatsapp()">
+                <h3 class="text-center as_subheading">Appointment Form</h3>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <label>name <span style="color: orange">*</span></label>
+                    <div class="form-group">
+                      <input class="form-control" type="text" name="userName" id="name" placeholder="Name" />
+                      <small id="name-error" class="error-message"></small>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <label>email <span style="color: orange">*</span></label>
-                      <div class="form-group">
-                        <input
-                          class="form-control"
-                          id="email"
-                          type="text"
-                          name="userEmail"
-                          placeholder="Email"
-                        />
-                        <small id="email-error" class="error-message"></small>
-                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <label>email <span style="color: orange">*</span></label>
+                    <div class="form-group">
+                      <input class="form-control" id="email" type="text" name="userEmail" placeholder="Email" />
+                      <small id="email-error" class="error-message"></small>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <label
-                        >mobile number
-                        <span style="color: orange">*</span></label
-                      >
-                      <div class="form-group">
-                        <input
-                          class="form-control"
-                          type="number"
-                          id="pnum"
-                          name="userPhone"
-                          placeholder="Mobile Number"
-                        />
-                        <small id="pnum-error" class="error-message"></small>
-                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <label>mobile number
+                      <span style="color: orange">*</span></label>
+                    <div class="form-group">
+                      <input class="form-control" type="number" id="pnum" name="userPhone"
+                        placeholder="Mobile Number" />
+                      <small id="pnum-error" class="error-message"></small>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <label>gender <span style="color: orange">*</span></label>
-                      <div class="form-group as_select_box">
-                        <select
-                          class="form-control"
-                          id="drop"
-                          data-placeholder="Gender"
-                          name="userGender"
-                          required
-                        >
-                          <option value="0">Select</option>
-                          <option value="Male">Male</option>
-                          <option value="Female">Female</option>
-                          <option value="Other">Other</option>
-                        </select>
-                        <small id="gender-error" class="error-message"></small>
-                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <label>gender <span style="color: orange">*</span></label>
+                    <div class="form-group as_select_box">
+                      <select class="form-control" id="drop" data-placeholder="Gender" name="userGender" required>
+                        <option value="0">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                      </select>
+                      <small id="gender-error" class="error-message"></small>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <label
-                        >Problems <span style="color: orange">*</span></label
-                      >
-                      <div
-                        class="form-group as_select_box"
-                        data-placeholder="Time of day"
-                      >
-                        <select
-                          class="form-control"
-                          id="drop2"
-                          onchange="updateSecondDropdown()"
-                          name="userProblem"
-                          data-placeholder="Select"
-                          required
-                        >
-                          <!-- <option value="0">Select problem</option> -->
-                          <option value="Match Making">Match Making</option>
-                          <option value="Deep Horoscope Analysis">
-                            Deep Horoscope Analysis
-                          </option>
-                          <option value="Prasanna Jodhidam">
-                            Prasanna Jodhidam
-                          </option>
-                          <option value="Others">Others</option>
-                        </select>
-                        <small id="problem-error" class="error-message"></small>
-                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <label>Services<span style="color: orange">*</span></label>
+                    <div class="form-group as_select_box" data-placeholder="Time of day">
+                      <select class="form-control" id="drop2" name="userProblem" data-placeholder="Select" required>
+                        <!-- <option value="0">Select problem</option> -->
+                        <option value="Family Horoscope Analysis(4 Persons)
+                          ">
+                          Family Horoscope Analysis(4 Persons)
+                        </option>
+                        <option value="Deep Horoscope Analysis(Individual)
+                          ">
+                          Deep Horoscope Analysis(Individual)
+                        </option>
+                        <option value="Prasanna Jothidam"> Prasanna Jothidam </option>
+                        <option value="Match Making
+                          ">Match Making
+                        </option>
+                        <option value="love">love</option>
+                        <option value="Marriage
+                        ">Marriage
+                        </option>
+                        <option value="Family Life
+                        ">Family Life
+                        </option>
+                        <option value="RelationShip
+                        ">RelationShip
+                        </option>
+                        <option value="Education
+                        ">Education
+                        </option>
+                        <option value="Business
+                        ">Business
+                        </option>
+                        <option value="Finance
+                        ">Finance
+                        </option>
+                        <option value="Health and Fitness
+                        ">Health and Fitness
+                        </option>
+                        <option value="Legal Issues
+                        ">Legal Issues
+                        </option>
+                        <option value="Job
+                        ">Job
+                        </option>
+                        <option value="Child Birth
+                      ">Child Birth
+                        </option>
+                        <option value="Gem Stone">Gem Stone
+                        </option>
+                        <option value="Foreign Settlement
+                        ">Foreign Settlement
+                      </option>
+                        <option value="Wealth and Property
+                        ">Wealth and Property
+                      </option>
+                        <option value="Foreign Travel
+                        ">Foreign Travel
+                      </option>
+                        <option value="Others">Others</option>
+                      </select>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <label>Other problems</label>
-                      <div
-                        class="form-group as_select_box"
-                        data-placeholder="Way to reach"
-                      >
-                        <select
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <label>Your Question?</label>
+                    <div class="form-group" data-placeholder="Way to reach">
+                      <input type="text" id="qa" class="form-control" placeholder="Type your questions here..">
+                      <!-- <select
                           class="form-control"
                           id="other"
                           name="userOtherProblem"
                           data-placeholder=""
-                        ></select>
-                      </div>
-                      <!-- <small class="error-message"></small> -->
+                        ></select> -->
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <label
-                        >Date of Birth
-                        <span style="color: orange">*</span></label
-                      >
-                      <div class="form-group">
-                        <input
-                          class="form-control"
-                          type="date"
-                          placeholder="Sec"
-                          id="sec"
-                          name="userDOB"
-                          required
-                        />
-                      </div>
-                      <!-- <small id="tob-error" class="error-message"></small> -->
+                    <small id="problem-error" class="error-message"></small>
+                    <!-- <small class="error-message"></small> -->
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <label>Date of Birth
+                      <span style="color: orange">*</span></label>
+                    <div class="form-group">
+                      <input class="form-control" type="date" placeholder="Sec" id="sec" name="userDOB" required />
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <div class="row">
-                        <label for="">Time of birth <span style="color: orange">*</span></label> 
-                        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group as_select_box">
-                            <select class="form-control" name="" id="hours" data-placeholder="Hours" required>
+                    <!-- <small id="tob-error" class="error-message"></small> -->
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                      <label for="">Time of birth <span style="color: orange">*</span></label>
+                      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group as_select_box">
+                          <select class="form-control" name="" id="hours" data-placeholder="Hours" required>
                             <option value="0">Hour</option>
-                            <option value="01">01</option>  
-                            <option value="02">02</option> 
-                            <option value="03">03</option> 
-                            <option value="04">04</option> 
-                            <option value="05">05</option> 
-                            <option value="06">06</option> 
-                            <option value="07">07</option> 
-                            <option value="08">08</option> 
-                            <option value="09">09</option> 
-                            <option value="10">10</option> 
-                            <option value="11">11</option> 
-                            <option value="12">12</option> 
-                            </select></div>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                          </select>
                         </div>
-                        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                          <!-- <label for=""></label> -->
-                          <div class="form-group as_select_box">
-                          <select class="form-control" name="" id="mins" data-placeholder="min" required>
-                          <option value="0">Min</option>
-                          <option value="00">00</option>
-                          <option value="01">01</option> 
-                          <option value="02">02</option> 
-                          <option value="03">03</option> 
-                          <option value="04">04</option> 
-                          <option value="05">05</option> 
-                          <option value="06">06</option> 
-                          <option value="07">07</option> 
-                          <option value="08">08</option> 
-                          <option value="09">09</option> 
-                          <option value="10">10</option> 
-                          <option value="11">11</option> 
-                          <option value="12">12</option>
-                          <option value="13">13</option> 
-                          <option value="14">14</option> 
-                          <option value="15">15</option> 
-                          <option value="16">16</option> 
-                          <option value="17">17</option> 
-                          <option value="18">18</option> 
-                          <option value="19">19</option> 
-                          <option value="20">20</option> 
-                          <option value="21">21</option> 
-                          <option value="22">22</option> 
-                          <option value="23">23</option> 
-                          <option value="24">24</option>
-                          <option value="25">25</option> 
-                          <option value="26">26</option> 
-                          <option value="25">27</option> 
-                          <option value="28">28</option> 
-                          <option value="29">29</option> 
-                          <option value="30">30</option> 
-                          <option value="31">31</option> 
-                          <option value="32">32</option> 
-                          <option value="33">33</option> 
-                          <option value="34">34</option> 
-                          <option value="35">35</option> 
-                          <option value="36">36</option>
-                          <option value="37">37</option> 
-                          <option value="38">38</option> 
-                          <option value="39">39</option> 
-                          <option value="40">40</option> 
-                          <option value="41">41</option>
-                          <option value="42">42</option>
-                          <option value="43">43</option>
-                          <option value="44">44</option>
-                          <option value="45">45</option>
-                          <option value="46">46</option>
-                          <option value="47">47</option>
-                          <option value="48">48</option>
-                          <option value="49">49</option>  
-                          <option value="50">50</option>
-                          <option value="51">51</option>
-                          <option value="52">52</option>
-                          <option value="53">53</option>
-                          <option value="54">54</option>
-                          <option value="55">55</option>
-                          <option value="56">56</option>
-                          <option value="57">57</option>
-                          <option value="58">58</option>
-                          <option value="59">59</option>
-                          </select></div>
                       </div>
                       <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                         <!-- <label for=""></label> -->
                         <div class="form-group as_select_box">
-                        <select class="form-control" name="" id="secs" data-placeholder="Secs" required>
-                        <option value="0">Sec</option>
-                        <option value="00">00</option>
-                        <option value="01">01</option> 
-                        <option value="02">02</option> 
-                        <option value="03">03</option> 
-                        <option value="04">04</option> 
-                        <option value="05">05</option> 
-                        <option value="06">06</option> 
-                        <option value="07">07</option> 
-                        <option value="08">08</option> 
-                        <option value="09">09</option> 
-                        <option value="10">10</option> 
-                        <option value="11">11</option> 
-                        <option value="12">12</option>
-                        <option value="13">13</option> 
-                        <option value="14">14</option> 
-                        <option value="15">15</option> 
-                        <option value="16">16</option> 
-                        <option value="17">17</option> 
-                        <option value="18">18</option> 
-                        <option value="19">19</option> 
-                        <option value="20">20</option> 
-                        <option value="21">21</option> 
-                        <option value="22">22</option> 
-                        <option value="23">23</option> 
-                        <option value="24">24</option>
-                        <option value="25">25</option> 
-                        <option value="26">26</option> 
-                        <option value="25">27</option> 
-                        <option value="28">28</option> 
-                        <option value="29">29</option> 
-                        <option value="30">30</option> 
-                        <option value="31">31</option> 
-                        <option value="32">32</option> 
-                        <option value="33">33</option> 
-                        <option value="34">34</option> 
-                        <option value="35">35</option> 
-                        <option value="36">36</option>
-                        <option value="37">37</option> 
-                        <option value="38">38</option> 
-                        <option value="39">39</option> 
-                        <option value="40">40</option> 
-                        <option value="41">41</option>
-                        <option value="42">42</option>
-                        <option value="43">43</option>
-                        <option value="44">44</option>
-                        <option value="45">45</option>
-                        <option value="46">46</option>
-                        <option value="47">47</option>
-                        <option value="48">48</option>
-                        <option value="49">49</option>  
-                        <option value="50">50</option>
-                        <option value="51">51</option>
-                        <option value="52">52</option>
-                        <option value="53">53</option>
-                        <option value="54">54</option>
-                        <option value="55">55</option>
-                        <option value="56">56</option>
-                        <option value="57">57</option>
-                        <option value="58">58</option>
-                        <option value="59">59</option>
-                        </select></div>
-                    </div>
-                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                      <div class="form-group as_select_box">
-                        <select name="" id="ampm" class="form-control" required>
-                          <option value="0">Select</option>
-                          <option value="am">AM</option>
-                          <option value="pm">PM</option>
-                        </select>
+                          <select class="form-control" name="" id="mins" data-placeholder="min" required>
+                            <option value="0">Min</option>
+                            <option value="00">00</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="25">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                            <option value="46">46</option>
+                            <option value="47">47</option>
+                            <option value="48">48</option>
+                            <option value="49">49</option>
+                            <option value="50">50</option>
+                            <option value="51">51</option>
+                            <option value="52">52</option>
+                            <option value="53">53</option>
+                            <option value="54">54</option>
+                            <option value="55">55</option>
+                            <option value="56">56</option>
+                            <option value="57">57</option>
+                            <option value="58">58</option>
+                            <option value="59">59</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <!-- <label for=""></label> -->
+                        <div class="form-group as_select_box">
+                          <select class="form-control" name="" id="secs" data-placeholder="Secs" required>
+                            <option value="0">Sec</option>
+                            <option value="00">00</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="25">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                            <option value="46">46</option>
+                            <option value="47">47</option>
+                            <option value="48">48</option>
+                            <option value="49">49</option>
+                            <option value="50">50</option>
+                            <option value="51">51</option>
+                            <option value="52">52</option>
+                            <option value="53">53</option>
+                            <option value="54">54</option>
+                            <option value="55">55</option>
+                            <option value="56">56</option>
+                            <option value="57">57</option>
+                            <option value="58">58</option>
+                            <option value="59">59</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group as_select_box">
+                          <select name="" id="ampm" class="form-control" required>
+                            <option value="0">Select</option>
+                            <option value="am">AM</option>
+                            <option value="pm">PM</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-                      </div>
-                      <!-- <label
+                    <!-- <label
                         >Time of Birth
                         <span style="color: orange">*</span></label
                       >
@@ -451,25 +418,17 @@
                         />
                       </div>
                       <small id="timeError" class="error-message"></small> -->
-                      <small id="tob-error" class="error-message"></small>
+                    <small id="tob-error" class="error-message"></small>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label>Place of birth
+                      <span style="color: orange">*</span></label>
+                    <div class="form-group">
+                      <input class="form-control" type="text" placeholder="Place" name="userPOB" id="birth" />
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <label
-                        >Place of birth
-                        <span style="color: orange">*</span></label
-                      >
-                      <div class="form-group">
-                        <input
-                          class="form-control"
-                          type="text"
-                          placeholder="Place"
-                          name="userPOB"
-                          id="birth"
-                        />
-                      </div>
-                      <small id="pob-error" class="error-message"></small>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <small id="pob-error" class="error-message"></small>
+                  </div>
+                  <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                       <label
                         >Ask your Question? (for prasanna predictions
                         only)</label
@@ -482,422 +441,315 @@
                           id="question"
                         ></textarea>
                       </div>
-                    </div>
-                    <div
-                      class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center as_padderTop20"
-                    >
-                      <button type="submit" class="as_btn">Submit</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="as_contact_section as_padderTop80 p-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-12">
-              <div class="as_contact_info">
-                <h1 class="as_heading">Contact Information</h1>
-                <p class="as_font14 as_margin0">
-                  Astroselvendran 103A/4,Perumal kovil Street,
-                  Venkatachalapuram, Theni-625534,Tamil Nadu
-                </p>
-
-                <div class="row">
-                  <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-sm-3">
-                    <div class="as_info_box">
-                      <span class="as_icon"
-                        ><img src="assets/images/svg/call1.svg" alt=""
-                      /></span>
-                      <div class="as_info">
-                        <h5>Call Us</h5>
-                        <p class="as_margin0 as_font14">+919003956886</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-sm-3">
-                    <div class="as_info_box" onclick="openWhatsApp()">
-                      <span class="as_icon"
-                        ><img src="assets/images/svg/whatsapp.svg" alt=""
-                      /></span>
-                      <div class="as_info">
-                        <h5>whatsapp</h5>
-                        <p class="as_margin0 as_font14">+919092505041</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-sm-3">
-                    <div class="as_info_box">
-                      <span class="as_icon"
-                        ><img src="assets/images/svg/mail.svg" alt=""
-                      /></span>
-                      <div class="as_info">
-                        <h5>Mail Us</h5>
-                        <p class="as_margin0 as_font14">
-                          <a href="javascript:;">astroselvendran@gmail.com</a>
-                        </p>
-                      </div>
-                    </div>
+                    </div> -->
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center as_padderTop20">
+                    <button type="submit" class="as_btn">Submit</button>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
-      </section>
-      <section class="as_customer_wrapper as_padderBottom80 as_padderTop80">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h1 class="as_heading as_heading_center">
-                What Our Customers Say
-              </h1>
-              <p class="as_font14 as_margin0 as_padderBottom50">
-                Astro Selvendran's expertise in astrology is remarkable. His
-                accurate insights and dedication to serving humanity are
-                commendable. <br />No doubt he's on the path to becoming a
-                sought-after astrologer.
+      </div>
+    </section>
+    <section class="as_contact_section as_padderTop80 p-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="as_contact_info">
+              <h1 class="as_heading">Contact Information</h1>
+              <p class="as_font14 as_margin0">
+                Astroselvendran 103A/4,Perumal kovil Street,
+                Venkatachalapuram, Theni-625534,Tamil Nadu
               </p>
 
-              <div class="row as_customer_slider">
-                <div class="col-lg-6 col-md-6">
-                  <div class="as_customer_box text-center">
-                    <span class="as_customer_img">
-                      <img
-                        src="assets/images/default.jpg"
-                        alt=""
-                        width="100px"
-                        height="100px"
-                      />
-                      <span
-                        ><img src="assets/images/svg/quote1.svg" alt=""
-                      /></span>
-                    </span>
-                    <p class="as_margin0">
-                      "An extremely authentic astrologer; everything resonated
-                      deeply with my experiences over the years. The insights
-                      provided made my future much clearer and filled with
-                      positivity. I appreciate the clarity and vivid imagery you
-                      employ, making astrology accessible even for beginners
-                      like myself."
-                    </p>
-                    <h3>G.Vinoth</h3>
-                    <p class="as_margin0">Mechanical Engineer</p>
+              <div class="row">
+                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-sm-3">
+                  <div class="as_info_box">
+                    <span class="as_icon"><img src="assets/images/svg/call1.svg" alt="" /></span>
+                    <div class="as_info">
+                      <h5>Call Us</h5>
+                      <p class="as_margin0 as_font14">+919003956886</p>
+                    </div>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="as_customer_box text-center">
-                    <span class="as_customer_img">
-                      <img
-                        src="assets/images/default.jpg"
-                        alt=""
-                        width="100px"
-                        height="100px"
-                      />
-                      <span
-                        ><img src="assets/images/svg/quote1.svg" alt=""
-                      /></span>
-                    </span>
-                    <p class="as_margin0">
-                      "I recently had a consultation session last week focused
-                      on work and profession with Astro Selvendran. It was a
-                      fantastic experience, during which I received numerous
-                      valuable suggestions pertaining to my career. I
-                      wholeheartedly recommend this package to gain insights
-                      into your work and profession based on your birth chart."
-                    </p>
-                    <h3>Shreya</h3>
-                    <p class="as_margin0">Software Developer</p>
+                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-sm-3">
+                  <div class="as_info_box" onclick="openWhatsApp()">
+                    <span class="as_icon"><img src="assets/images/svg/whatsapp.svg" alt="" /></span>
+                    <div class="as_info">
+                      <h5>whatsapp</h5>
+                      <p class="as_margin0 as_font14">+919092505041</p>
+                    </div>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="as_customer_box text-center">
-                    <span class="as_customer_img">
-                      <img
-                        src="assets/images/default.jpg"
-                        alt=""
-                        width="100px"
-                        height="100px"
-                      />
-                      <span
-                        ><img src="assets/images/svg/quote1.svg" alt=""
-                      /></span>
-                    </span>
-                    <p class="as_margin0">
-                      "Astro Selvendran is truly exceptional in the field of
-                      astrology. His ability to accurately recount past events
-                      in the blink of an eye is remarkable. His extensive
-                      knowledge is truly commendable, and his service to
-                      humanity is invaluable. I have no doubt that he will soon
-                      become the most sought-after astrologer. May God bless him
-                      with a long and fulfilling life."
-                    </p>
-                    <h3>Deepak</h3>
-                    <p class="as_margin0">Bank Manager</p>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="as_customer_box text-center">
-                    <span class="as_customer_img">
-                      <img
-                        src="assets/images/default.jpg"
-                        alt=""
-                        width="100px"
-                        height="100px"
-                      />
-                      <span
-                        ><img src="assets/images/svg/quote1.svg" alt=""
-                      /></span>
-                    </span>
-                    <p class="as_margin0">
-                      "Astro Selvendran's proficiency in astrology is truly
-                      remarkable. His ability to effortlessly recall past events
-                      is a testament to his deep knowledge and understanding of
-                      the subject. I have personally witnessed the accuracy of
-                      his predictions, and it's truly impressive. His dedication
-                      to serving humanity through his astrological insights is
-                      invaluable."
-                    </p>
-                    <h3>Arjun Kumar</h3>
-                    <p class="as_margin0">Financial Analyst</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="as_map_section">
-        <iframe
-          width="100%"
-          height="450"
-          frameborder="0"
-          style="border: 0"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.6103157486535!2d77.4728485!3d9.9168544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b99a64b3a9f7b1f%3A0x7ef2b8efc6edbcdb!2s9.9168544%2C%2077.4728485!5e0!3m2!1sen!2sin!4v1645567696020!5m2!1sen!2sin"
-          allowfullscreen
-        ></iframe>
-      </section>
-      <section class="as_footer_wrapper as_padderTop80">
-        <div class="container">
-          <div class="as_footer_inner as_padderTop50 as_padderBottom80">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="as_footer_widget">
-                  <div class="as_footer_logo">
-                    <a href="index.html"
-                      ><img src="assets/images/Logon.png" class="slogo" alt=""
-                    /></a>
-                  </div>
-                  <p>
-                    Astro Selvendran is a well-known astrologer in India, known
-                    for his unique blend of traditional and modern methods.
-                  </p>
-
-                  <div class="as_share_box">
-                    <p>Follow Us</p>
-                    <ul class="d-flex">
-                      <li>
-                        <a href="javascript:;"
-                          ><img src="assets/images/svg/facebook.svg" alt=""
-                        /></a>
-                      </li>
-                      <li>
-                        <a href="javascript:;"
-                          ><img
-                            src="assets/images/ins.png"
-                            alt=""
-                            height="18px"
-                            width="18px"
-                        /></a>
-                      </li>
-                      <li>
-                        <a href="javascript:;"
-                          ><img src="assets/images/svg/youtube.svg" alt=""
-                        /></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="as_footer_widget">
-                  <h3 class="as_footer_heading">Our Services</h3>
-
-                  <ul>
-                    <li>
-                      <a href="service.html"
-                        ><span
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            preserveAspectRatio="xMidYMid"
-                            width="8"
-                            height="12"
-                            viewBox="0 0 8 12"
-                          >
-                            <path
-                              d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
-                              class="cls-1"
-                            /></svg
-                        ></span>
-                        Match Making</a
-                      >
-                    </li>
-                    <li>
-                      <a href="service.html">
-                        <span
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            preserveAspectRatio="xMidYMid"
-                            width="8"
-                            height="12"
-                            viewBox="0 0 8 12"
-                          >
-                            <path
-                              d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
-                              class="cls-1"
-                            /></svg
-                        ></span>
-                        Deep Horoscope Analysis</a
-                      >
-                    </li>
-                    <li>
-                      <a href="service.html">
-                        <span
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            preserveAspectRatio="xMidYMid"
-                            width="8"
-                            height="12"
-                            viewBox="0 0 8 12"
-                          >
-                            <path
-                              d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
-                              class="cls-1"
-                            /></svg
-                        ></span>
-                        Prasanna Jodhidam</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="as_footer_widget">
-                  <h3 class="as_footer_heading">Quick Links</h3>
-
-                  <ul>
-                    <li>
-                      <a href="index.html"
-                        ><span
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            preserveAspectRatio="xMidYMid"
-                            width="8"
-                            height="12"
-                            viewBox="0 0 8 12"
-                          >
-                            <path
-                              d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
-                              class="cls-1"
-                            /></svg
-                        ></span>
-                        Home</a
-                      >
-                    </li>
-                    <li>
-                      <a href="service.html"
-                        ><span
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            preserveAspectRatio="xMidYMid"
-                            width="8"
-                            height="12"
-                            viewBox="0 0 8 12"
-                          >
-                            <path
-                              d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
-                              class="cls-1"
-                            /></svg
-                        ></span>
-                        Services</a
-                      >
-                    </li>
-                    <li>
-                      <a href="appointment.html"
-                        ><span
-                          ><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            preserveAspectRatio="xMidYMid"
-                            width="8"
-                            height="12"
-                            viewBox="0 0 8 12"
-                          >
-                            <path
-                              d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
-                              class="cls-1"
-                            /></svg
-                        ></span>
-                        Contact us</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="as_footer_widget">
-                  <h3 class="as_footer_heading">Contact Us</h3>
-
-                  <ul class="as_contact_list">
-                    <li>
-                      <img src="assets/images/svg/map.svg" alt="" />
-                      <p>
-                        Astroselvendran 103A/4,Perumal kovil Street,
-                        Venkatachalapuram, Theni-625534,Tamil Nadu
-                      </p>
-                    </li>
-                    <li>
-                      <img src="assets/images/svg/address.svg" alt="" />
-                      <p>
+                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-sm-3">
+                  <div class="as_info_box">
+                    <span class="as_icon"><img src="assets/images/svg/mail.svg" alt="" /></span>
+                    <div class="as_info">
+                      <h5>Mail Us</h5>
+                      <p class="as_margin0 as_font14">
                         <a href="javascript:;">astroselvendran@gmail.com</a>
                       </p>
-                    </li>
-                    <li>
-                      <img src="assets/images/svg/call.svg" alt="" />
-                      <p>
-                        <a href="javascript:;">+91 9003956886</a><br />
-                        <a href="javascript:;">+91 9092505041</a>
-                      </p>
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="as_copyright_wrapper text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <p>Copyright &copy; 2024 Visaiinnovations. All Right Reserved.</p>
+      </div>
+    </section>
+    <section class="as_customer_wrapper as_padderBottom80 as_padderTop80">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h1 class="as_heading as_heading_center">
+              What Our Customers Say
+            </h1>
+            <p class="as_font14 as_margin0 as_padderBottom50">
+              Astro Selvendran's expertise in astrology is remarkable. His
+              accurate insights and dedication to serving humanity are
+              commendable. <br />No doubt he's on the path to becoming a
+              sought-after astrologer.
+            </p>
+
+            <div class="row as_customer_slider">
+              <div class="col-lg-6 col-md-6">
+                <div class="as_customer_box text-center">
+                  <span class="as_customer_img">
+                    <img src="assets/images/default.jpg" alt="" width="100px" height="100px" />
+                    <span><img src="assets/images/svg/quote1.svg" alt="" /></span>
+                  </span>
+                  <p class="as_margin0">
+                    "An extremely authentic astrologer; everything resonated
+                    deeply with my experiences over the years. The insights
+                    provided made my future much clearer and filled with
+                    positivity. I appreciate the clarity and vivid imagery you
+                    employ, making astrology accessible even for beginners
+                    like myself."
+                  </p>
+                  <h3>G.Vinoth</h3>
+                  <p class="as_margin0">Mechanical Engineer</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="as_customer_box text-center">
+                  <span class="as_customer_img">
+                    <img src="assets/images/default.jpg" alt="" width="100px" height="100px" />
+                    <span><img src="assets/images/svg/quote1.svg" alt="" /></span>
+                  </span>
+                  <p class="as_margin0">
+                    "I recently had a consultation session last week focused
+                    on work and profession with Astro Selvendran. It was a
+                    fantastic experience, during which I received numerous
+                    valuable suggestions pertaining to my career. I
+                    wholeheartedly recommend this package to gain insights
+                    into your work and profession based on your birth chart."
+                  </p>
+                  <h3>Shreya</h3>
+                  <p class="as_margin0">Software Developer</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="as_customer_box text-center">
+                  <span class="as_customer_img">
+                    <img src="assets/images/default.jpg" alt="" width="100px" height="100px" />
+                    <span><img src="assets/images/svg/quote1.svg" alt="" /></span>
+                  </span>
+                  <p class="as_margin0">
+                    "Astro Selvendran is truly exceptional in the field of
+                    astrology. His ability to accurately recount past events
+                    in the blink of an eye is remarkable. His extensive
+                    knowledge is truly commendable, and his service to
+                    humanity is invaluable. I have no doubt that he will soon
+                    become the most sought-after astrologer. May God bless him
+                    with a long and fulfilling life."
+                  </p>
+                  <h3>Deepak</h3>
+                  <p class="as_margin0">Bank Manager</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="as_customer_box text-center">
+                  <span class="as_customer_img">
+                    <img src="assets/images/default.jpg" alt="" width="100px" height="100px" />
+                    <span><img src="assets/images/svg/quote1.svg" alt="" /></span>
+                  </span>
+                  <p class="as_margin0">
+                    "Astro Selvendran's proficiency in astrology is truly
+                    remarkable. His ability to effortlessly recall past events
+                    is a testament to his deep knowledge and understanding of
+                    the subject. I have personally witnessed the accuracy of
+                    his predictions, and it's truly impressive. His dedication
+                    to serving humanity through his astrological insights is
+                    invaluable."
+                  </p>
+                  <h3>Arjun Kumar</h3>
+                  <p class="as_margin0">Financial Analyst</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section class="as_map_section">
+      <iframe width="100%" height="450" frameborder="0" style="border: 0"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.6103157486535!2d77.4728485!3d9.9168544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b99a64b3a9f7b1f%3A0x7ef2b8efc6edbcdb!2s9.9168544%2C%2077.4728485!5e0!3m2!1sen!2sin!4v1645567696020!5m2!1sen!2sin"
+        allowfullscreen></iframe>
+    </section>
+    <section class="as_footer_wrapper as_padderTop80">
+      <div class="container">
+        <div class="as_footer_inner as_padderTop50 as_padderBottom80">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="as_footer_widget">
+                <div class="as_footer_logo">
+                  <a href="index.html"><img src="assets/images/Logon.png" class="slogo" alt="" /></a>
+                </div>
+                <p>
+                  Astro Selvendran is a well-known astrologer in India, known
+                  for his unique blend of traditional and modern methods.
+                </p>
 
-    <!-- Modal -->
-    <!-- <div id="as_login" class="modal fade" role="dialog">
+                <div class="as_share_box">
+                  <p>Follow Us</p>
+                  <ul class="d-flex">
+                    <li>
+                      <a href="javascript:;"><img src="assets/images/svg/facebook.svg" alt="" /></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="assets/images/ins.png" alt="" height="18px" width="18px" /></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="assets/images/svg/youtube.svg" alt="" /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="as_footer_widget">
+                <h3 class="as_footer_heading">Our Services</h3>
+
+                <ul>
+                  <li>
+                    <a href="service.html"><span><svg xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="8"
+                          height="12" viewBox="0 0 8 12">
+                          <path
+                            d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                            class="cls-1" />
+                        </svg></span>
+                      Match Making</a>
+                  </li>
+                  <li>
+                    <a href="service.html">
+                      <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          preserveAspectRatio="xMidYMid" width="8" height="12" viewBox="0 0 8 12">
+                          <path
+                            d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                            class="cls-1" />
+                        </svg></span>
+                      Deep Horoscope Analysis</a>
+                  </li>
+                  <li>
+                    <a href="service.html">
+                      <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          preserveAspectRatio="xMidYMid" width="8" height="12" viewBox="0 0 8 12">
+                          <path
+                            d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                            class="cls-1" />
+                        </svg></span>
+                      Prasanna Jodhidam</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="as_footer_widget">
+                <h3 class="as_footer_heading">Quick Links</h3>
+
+                <ul>
+                  <li>
+                    <a href="index.html"><span><svg xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="8"
+                          height="12" viewBox="0 0 8 12">
+                          <path
+                            d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                            class="cls-1" />
+                        </svg></span>
+                      Home</a>
+                  </li>
+                  <li>
+                    <a href="service.html"><span><svg xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="8"
+                          height="12" viewBox="0 0 8 12">
+                          <path
+                            d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                            class="cls-1" />
+                        </svg></span>
+                      Services</a>
+                  </li>
+                  <li>
+                    <a href="appointment.html"><span><svg xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="8"
+                          height="12" viewBox="0 0 8 12">
+                          <path
+                            d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                            class="cls-1" />
+                        </svg></span>
+                      Contact us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="as_footer_widget">
+                <h3 class="as_footer_heading">Contact Us</h3>
+
+                <ul class="as_contact_list">
+                  <li>
+                    <img src="assets/images/svg/map.svg" alt="" />
+                    <p>
+                      Astroselvendran 103A/4,Perumal kovil Street,
+                      Venkatachalapuram, Theni-625534,Tamil Nadu
+                    </p>
+                  </li>
+                  <li>
+                    <img src="assets/images/svg/address.svg" alt="" />
+                    <p>
+                      <a href="javascript:;">astroselvendran@gmail.com</a>
+                    </p>
+                  </li>
+                  <li>
+                    <img src="assets/images/svg/call.svg" alt="" />
+                    <p>
+                      <a href="javascript:;">+91 9003956886</a><br />
+                      <a href="javascript:;">+91 9092505041</a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="as_copyright_wrapper text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; 2024 Visaiinnovations. All Right Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal -->
+  <!-- <div id="as_login" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -1009,44 +861,30 @@
       </div>
     </div> -->
 
-    <!-- javascript -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script
-      type="text/javascript"
-      src="assets/js/plugin/slick/slick.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/js/plugin/countto/jquery.countTo.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/js/plugin/airdatepicker/datepicker.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/js/plugin/select2/select2.min.js"
-    ></script>
-    <script src="assets/js/custom.js"></script>
-    <!-- <script src="assets/js/Validation.js"></script> -->
-    <script src="assets/js/Dynamic.js"></script>
-    <script src="assets/js/Condition.js"></script>
-    <script src="assets/js/whatsapp.js"></script>
-    <script>
-      // Get the query parameter value from the URL
-      var urlParams = new URLSearchParams(window.location.search);
-      var selectedOptionValue = urlParams.get("option");
-      // Set the selected option in the dropdown
-      var selectedOptionDropdown = document.getElementById("drop2");
-      selectedOptionDropdown.value = selectedOptionValue;
-      window.onload = function () {
-        updateSecondDropdown();
-      };
-    </script>
-  </body>
+  <!-- javascript -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+  <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+  <script type="text/javascript" src="assets/js/plugin/select2/select2.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <!-- <script src="assets/js/Validation.js"></script> -->
+  <!-- <script src="assets/js/Dynamic.js"></script> -->
+  <script src="assets/js/Condition.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script>
+    // Get the query parameter value from the URL
+    var urlParams = new URLSearchParams(window.location.search);
+    var selectedOptionValue = urlParams.get("option");
+    // Set the selected option in the dropdown
+    var selectedOptionDropdown = document.getElementById("drop2");
+    selectedOptionDropdown.value = selectedOptionValue;
+    window.onload = function () {
+      updateSecondDropdown();
+    };
+  </script>
+</body>
+
 </html>
