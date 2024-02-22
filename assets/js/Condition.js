@@ -142,9 +142,9 @@ function validateForm() {
 //     return isValid;
 // });
 function sendwhatsapp() {
-    // var phonenumber = "+917339124748";
+    var phonenumber = "+917339124748";
       // var phonenumber = "+918667662525";
-    var phonenumber = "+919092505041";
+    // var phonenumber = "+919092505041";
   
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
@@ -187,6 +187,7 @@ function sendwhatsapp() {
           "%0a" +
           "*Problem :* " +
           problem +
+          "%0a" +
           "%0a" +
           "*Date of Birth :* " +
           convertedDOB +
