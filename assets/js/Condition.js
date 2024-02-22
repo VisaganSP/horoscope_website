@@ -220,9 +220,9 @@ function sendwhatsapp() {
           "%0a" +
           "*Problem :* " +
           problem +
+          "%0a" +
           "*Question :* " +
           ques +
-          "%0a" +
           "%0a" +
           "*Date of Birth :* " +
           convertedDOB +
