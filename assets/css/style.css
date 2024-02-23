@@ -10,6 +10,14 @@
 small{
     color: red;
 }
+.headtop{
+    margin-top: 9em;
+}
+@media only screen and (max-width: 600px){
+    .headtop{
+        margin-top: 17em;
+    }
+}
 .as_banner_img,.selva{
   display: block;
   width: 100%;
